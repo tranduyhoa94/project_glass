@@ -25,352 +25,223 @@
     @cms
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/images/admin/favicon.png">
+    
     <link rel="canonical" href="{{request()->url()}}">
+    <link rel='stylesheet' id='flatsome-googlefonts-css'  href='http://fonts.googleapis.com/css?family=Roboto%3Aregular%2C700%2Cregular%2C700%2Cregular&amp;display=swap&amp;ver=3.9' type='text/css' media='all' />
+    {{-- <link rel='stylesheet' id='dashicons-css'  href="{{ asset('wp-includes/css/dashicons.min3bea.css?ver=5.6.7') }}" type='text/css' media='all' /> --}}
+    <link rel='stylesheet' id='menu-icons-extra-css'  href="{{ asset('wp-content/plugins/ot-flatsome-vertical-menu/libs/menu-icons/css/extra.min9fd1.css?ver=0.12.2') }}" type='text/css' media='all' />
+    {{-- <link rel='stylesheet' id='wp-block-library-css'  href="{{ asset('wp-includes/css/dist/block-library/style.min3bea.css?ver=5.6.7') }}" type='text/css' media='all' /> --}}
+    {{-- <link rel='stylesheet' id='a-z-listing-block-css'  href="{{ asset('wp-content/plugins/a-z-listing/css/a-z-listing-defaultae82.css?ver=4.2.0') }}" type='text/css' media='all' /> --}}
+    {{-- <link rel='stylesheet' id='menu-image-css'  href="{{ asset('wp-content/plugins/menu-image/includes/css/menu-image8d18.css?ver=3.0.5') }}" type='text/css' media='all' /> --}}
+    {{-- <link rel='stylesheet' id='contact-form-7-css'  href="{{ asset('wp-content/plugins/contact-form-7/includes/css/styles7661.css?ver=5.4.2') }}" type='text/css' media='all' /> --}}
+    {{-- <link rel='stylesheet' id='devvn-quickbuy-style-css'  href="{{ asset('wp-content/plugins/devvn-quick-buy/css/devvn-quick-buy784e.css?ver=2.1.6') }}" type='text/css' media='all' /> --}}
+    <link rel='stylesheet' id='ot-vertical-menu-css-css'  href="{{ asset('wp-content/plugins/ot-flatsome-vertical-menu/assets/css/style9632.css?ver=1.2.3') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='uaf_client_css-css'  href="{{ asset('wp-content/uploads/useanyfont/uaf4402.css?ver=1644937321') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='wonderplugin-3dcarousel-style-css'  href="{{ asset('wp-content/plugins/wonderplugin-3dcarousel-trial/engine/wonderplugin3dcarousel7868.css?ver=3.9') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='flatsome-icons-css'  href="{{ asset('wp-content/themes/flatsome/assets/css/fl-iconsae34.css?ver=3.12') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='flatsome-main-css'  href="{{ asset('wp-content/themes/flatsome/assets/css/flatsome2916.css?ver=3.13.1') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='flatsome-shop-css'  href="{{ asset('wp-content/themes/flatsome/assets/css/flatsome-shop2916.css?ver=3.13.1') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='flatsome-style-css'  href="{{ asset('wp-content/themes/ecom-child/style6aec.css?ver=3.0') }}" type='text/css' media='all' />
+    {{-- <link rel='stylesheet' id='a-z-listing-css'  href="{{ asset('wp-content/plugins/a-z-listing/css/a-z-listing-defaultae82.css?ver=4.2.0') }}" type='text/css' media='all' /> --}}
+    <style id='font-awesome-official-v4shim-inline-css' type='text/css'>
+        @font-face {
+        font-family: "FontAwesome";
+        font-display: block;
+        src: url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.eot"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.woff2") format("woff2"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.woff") format("woff"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.ttf") format("truetype"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+        }
+        
+        @font-face {
+        font-family: "FontAwesome";
+        font-display: block;
+        src: url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.eot"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.woff2") format("woff2"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.woff") format("woff"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.ttf") format("truetype"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+        }
+        
+        @font-face {
+        font-family: "FontAwesome";
+        font-display: block;
+        src: url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.eot"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.woff2") format("woff2"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.woff") format("woff"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.ttf") format("truetype"),
+                url("https://use.fontawesome.com/releases/v5.15.1/webfonts/fa-regular-400.svg#fontawesome") format("svg");
+        unicode-range: U+F004-F005,U+F007,U+F017,U+F022,U+F024,U+F02E,U+F03E,U+F044,U+F057-F059,U+F06E,U+F070,U+F075,U+F07B-F07C,U+F080,U+F086,U+F089,U+F094,U+F09D,U+F0A0,U+F0A4-F0A7,U+F0C5,U+F0C7-F0C8,U+F0E0,U+F0EB,U+F0F3,U+F0F8,U+F0FE,U+F111,U+F118-F11A,U+F11C,U+F133,U+F144,U+F146,U+F14A,U+F14D-F14E,U+F150-F152,U+F15B-F15C,U+F164-F165,U+F185-F186,U+F191-F192,U+F1AD,U+F1C1-F1C9,U+F1CD,U+F1D8,U+F1E3,U+F1EA,U+F1F6,U+F1F9,U+F20A,U+F247-F249,U+F24D,U+F254-F25B,U+F25D,U+F267,U+F271-F274,U+F279,U+F28B,U+F28D,U+F2B5-F2B6,U+F2B9,U+F2BB,U+F2BD,U+F2C1-F2C2,U+F2D0,U+F2D2,U+F2DC,U+F2ED,U+F328,U+F358-F35B,U+F3A5,U+F3D1,U+F410,U+F4AD;
+        }
+    </style>
+    <script type='text/javascript' src="{{ asset('wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1') }}" id='jquery-core-js'></script>
+    <script type='text/javascript' src="{{ asset('wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2') }}" id='jquery-migrate-js'></script>
+    <script type='text/javascript' src="{{ asset('wp-content/plugins/wonderplugin-3dcarousel-trial/engine/wp3dcarousellightbox7868.js?ver=3.9') }}" id='wonderplugin-3dcarousel-lightbox-script-js'></script>
+    <script type='text/javascript' src="{{ asset('wp-content/plugins/wonderplugin-3dcarousel-trial/engine/wonderplugin3dcarousel7868.js?ver=3.9') }}" id='wonderplugin-3dcarousel-script-js'></script>
     <!-- Custom CSS -->
-    <link href="/css/home/app.min.css" rel="stylesheet">
-    <!-- Google Tag Manager -->
+    <style type="text/css" id="wp-custom-css">
+        .form-lienhe 
+input[type='search'], input[type='number'], input[type='email'], input[type='tel'], input[type='text'], textarea{
+border:1px solid #386531;
+}
 
-    <!-- End Google Tag Manager -->
+.form-lienhe input[type='submit']
+{
+background:#d4a86e !important;
+display:block;
+margin: -54px auto;
+margin-right: 1px;
+}
+.form-lienhe input[type="text"]::placeholder:{
+font-family: FontAwesome;
+content: "\f007";
+}
+/* Điều chỉnh khoảng các giữa các đoạn văn*/
+p {
+margin-bottom: 7px;
+}
+.wpcf7 .form-lien-he h2{
+color:white;
+padding-top:1.8rem;
+margin-bottom:0!important;
+font-family:TimesNewRoman;
+}
+.wpcf7 .form-lien-he p.wpcf7_des{
+color:white;
+margin-bottom:1rem;
+padding-bottom:1rem;
+font-weight:700;
+} 
+.row_1{
+margin:0 auto;
+}
+.wpcf7 .form-lien-he .row_1 span{
+width:50%;
+float:left;
+padding:0 10px;
+}
+.wpcf7 .form-lien-he .row_2 span{
+width:50%;
+float:left;
+padding:0 10px;
+}
+.wpcf7 .form-lien-he .row_2 textarea{
+padding-top: 0.5em;
+    min-height:50px;
+    background: #c0bebe38;
+border:none;
+color:white;
+resize:none;
+border-radius:0 20px 20px 0;
+}
+.form-lien-he input{
+    background: #c0bebe38;
+border:none;
+height:50px;
+color:white;
+}
+.form-lien-he .your-name input{
+border-radius:20px 0 0 20px;
+}
+.form-lien-he .your-email input{
+border-radius:0 20px 20px 0;
+}
+.form-lien-he .your-phone input{
+border-radius:20px 0 0 20px;
+}
+.form-lien-he .button{
+border-radius:20px;
+padding:0 4.5rem;
+margin-top:1rem;
+}
+h2.title-main~p{
+text-align:center;
+}
+.ss-congtrinh .section-bg.bg-loaded {
+background-image: url(wp-content/uploads/2021/01/bg-cong-trinh.jpg);
+}
+.ss-tuvan .section-bg.bg-loaded {
+background-image: url(wp-content/uploads/2020/11/contact_form.png);
+}
+
+@media only screen and (max-width: 48em) {
+
+.mfp-content .sidebar-menu .nav-sidebar .html{
+    display:block;
+    padding: 0;
+}
+    .mfp-content .sidebar-menu .nav-sidebar .html .menu-topbar{
+    display: block;
+}
+    .mfp-content .sidebar-menu .nav-sidebar .html .menu-topbar li{
+        padding-left: 0;
+}
+.mfp-content .sidebar-menu .nav-sidebar .html .menu-topbar li a{
+        padding: 12px 20px !important;
+border-bottom: 1px solid #ececec;
+}
+}
+
+    .wpf-center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    }
+    .wpf-center .wpforms-head-container, 
+    .wpf-center .wpforms-submit-container {
+    text-align: center; 
+    }		
+</style>
+    <link href="/css/home/app.min.css" rel="stylesheet">
+    
+    <!-- Google Tag Manager -->
     @yield('css')
 </head>
-<body id="body-site">
-<!-- Google Tag Manager (noscript) -->
-
-<!-- End Google Tag Manager (noscript) -->
-<svg aria-hidden="true" class="common-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-        <symbol id="icon-quotes-left" viewbox="0 0 32 32">
-            <path d="M7.031 14c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7l-0.031-1c0-7.732 6.268-14 14-14v4c-2.671 0-5.182 1.040-7.071 2.929-0.364 0.364-0.695 0.751-0.995 1.157 0.357-0.056 0.724-0.086 1.097-0.086zM25.031 14c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7l-0.031-1c0-7.732 6.268-14 14-14v4c-2.671 0-5.182 1.040-7.071 2.929-0.364 0.364-0.695 0.751-0.995 1.157 0.358-0.056 0.724-0.086 1.097-0.086z"></path>
-        </symbol>
-        <symbol id="icon-send" viewbox="0 0 18 18">
-            <path d="M15.9488 0.738308L1.26884 6.87831C0.43884 7.22831 0.45884 8.40831 1.28884 8.72831L6.62884 10.7983C6.88884 10.8983 7.09884 11.1083 7.19884 11.3683L9.25884 16.6983C9.57884 17.5383 10.7688 17.5583 11.1188 16.7283L17.2688 2.05831C17.5988 1.22831 16.7688 0.398308 15.9488 0.738308Z"></path>
-        </symbol>
-        <symbol id="icon-plus" viewbox="0 0 24 24">
-            <path xmlns="http://www.w3.org/2000/svg" d="M12 3C11.45 3 11 3.45 11 4V11H4C3.45 11 3 11.45 3 12C3 12.55 3.45 13 4 13H11V20C11 20.55 11.45 21 12 21C12.55 21 13 20.55 13 20V13H20C20.55 13 21 12.55 21 12C21 11.45 20.55 11 20 11H13V4C13 3.45 12.55 3 12 3Z"></path>
-        </symbol>
-        <symbol id="icon-expand-more" viewbox="0 0 24 14">
-            <path xmlns="http://www.w3.org/2000/svg" d="M4.25078 13.1479L12.0108 5.38794L19.7708 13.1479C20.1444 13.5224 20.6517 13.7329 21.1808 13.7329C21.7098 13.7329 22.2171 13.5224 22.5908 13.1479C23.3708 12.3679 23.3708 11.1079 22.5908 10.3279L13.4108 1.14794C12.6308 0.367938 11.3708 0.367938 10.5908 1.14794L1.41078 10.3279C0.630781 11.1079 0.630781 12.3679 1.41078 13.1479C2.19078 13.9079 3.47078 13.9279 4.25078 13.1479Z"></path>
-        </symbol>
-        <symbol id="icon-facebook" viewbox="0 0 17 17">
-            <path xmlns="http://www.w3.org/2000/svg" d="M26.0998 12.4367C26.0998 11.089 24.9107 9.8999 23.563 9.8999H13.3366C11.9889 9.8999 10.7998 11.089 10.7998 12.4367V22.6631C10.7998 24.0108 11.9889 25.1999 13.3366 25.1999H18.4894V19.4129H16.5869V16.8761H18.4894V15.8455C18.4894 14.1015 19.7578 12.5952 21.3433 12.5952H23.4045V15.132H21.3433C21.1055 15.132 20.8677 15.3698 20.8677 15.8455V16.8761H23.4045V19.4129H20.8677V25.1999H23.563C24.9107 25.1999 26.0998 24.0108 26.0998 22.6631V12.4367Z"></path>
-        </symbol>
-        <symbol id="icon-arrow" viewbox="0 0 16 16">
-            <path xmlns="http://www.w3.org/2000/svg" d="M1.20898 9.0002H12.379L7.49898 13.8802C7.10898 14.2702 7.10898 14.9102 7.49898 15.3002C7.88898 15.6902 8.51898 15.6902 8.90898 15.3002L15.499 8.7102C15.889 8.3202 15.889 7.6902 15.499 7.3002L8.91898 0.7002C8.73215 0.512948 8.4785 0.407715 8.21398 0.407715C7.94947 0.407715 7.69582 0.512948 7.50898 0.7002C7.11898 1.0902 7.11898 1.7202 7.50898 2.1102L12.379 7.0002H1.20898C0.658984 7.0002 0.208984 7.4502 0.208984 8.0002C0.208984 8.5502 0.658984 9.0002 1.20898 9.0002Z"></path>
-        </symbol>
-        <symbol id="icon-close" viewbox="0 0 10 10">
-            <path xmlns="http://www.w3.org/2000/svg" d="M9.72504 0.282528C9.58492 0.142089 9.39468 0.0631641 9.19629 0.0631641C8.9979 0.0631641 8.80766 0.142089 8.66754 0.282528L5.00004 3.94253L1.33254 0.275028C1.19242 0.134589 1.00218 0.0556641 0.803789 0.0556641C0.605401 0.0556641 0.415163 0.134589 0.275039 0.275028C-0.0174609 0.567528 -0.0174609 1.04003 0.275039 1.33253L3.94254 5.00003L0.275039 8.66753C-0.0174609 8.96003 -0.0174609 9.43253 0.275039 9.72503C0.567539 10.0175 1.04004 10.0175 1.33254 9.72503L5.00004 6.05753L8.66754 9.72503C8.96004 10.0175 9.43254 10.0175 9.72504 9.72503C10.0175 9.43253 10.0175 8.96003 9.72504 8.66753L6.05754 5.00003L9.72504 1.33253C10.01 1.04753 10.01 0.567528 9.72504 0.282528Z"></path>
-        </symbol>
-        <symbol id="icon-chevron-up" viewbox="0 0 28 28">
-            <path d="M26.297 20.797l-2.594 2.578c-0.391 0.391-1.016 0.391-1.406 0l-8.297-8.297-8.297 8.297c-0.391 0.391-1.016 0.391-1.406 0l-2.594-2.578c-0.391-0.391-0.391-1.031 0-1.422l11.594-11.578c0.391-0.391 1.016-0.391 1.406 0l11.594 11.578c0.391 0.391 0.391 1.031 0 1.422z"></path>
-        </symbol>
-    </defs>
-</svg>
-<div class="navigation">
-    <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-
-    {{-- icon --}}
-    <label id="navigation__button" for="navi-toggle" class="navigation__button">
-        <span class="navigation__icon"></span>
-    </label>
-    <div id="navigation__background" class="navigation__background">
-    </div>
-    <div id="navigation__title" class="navigation__title menu" >
-        <nav class="site-nav">
-            <ul class="my-menu">
-                <li class="my-item"><a href="/@lang('about-us')" class="navigation__link">@lang('About Us')</a></li>
-                <li class="my-item">
-                    <a href="#">Dịch vụ Facebook</a>
-                    <ul class="sub-menu">
-                        <li class="sub-item">
-                           <a href="/mua-group-facebook">Bán Group Facebook</a>
-                        </li>
-                        {{-- <li class="sub-item"> <a href="/tin-tuc/tang-thanh-vien-cho-group"> Tăng thành viên cho Group </a></li> --}}
-                        <li class="sub-item"> <a href="/mua-fanpage-facebook"> Bán Fanpage Facebook </a></li>
-                        {{-- <li class="sub-item"> <a href="/tin-tuc/tang-like-cho-fanpage"> Tăng Like cho Fanpage </a></li> --}}
-                        {{-- <li class="sub-item"> <a href="/tin-tuc/thu-mua-lai-group-facebook"> Thu mua lại Group facebook </a></li>
-                        <li class="sub-item"> <a href="/tin-tuc/thu-mua-lai-fanpage"> Thu mua lại FanPage </a></li> --}}
-                    </ul>
-                </li class="my-item">
-                <li class="my-item">
-                    <a href="#">Dịch vụ Tiktok</a>
-                    <ul class="sub-menu">
-                        <li class="sub-item">
-                           <a href="/mua-kenh-tiktok">Bán tài khoản Tiktok</a>
-                        </li>
-                        {{-- <li class="sub-item">
-                            <a href="/chuyen-nhuong-lai-kenh-tiktok">Thu mua tài khoản Tiktok</a>
-                         </li> --}}
-                        {{-- <li class="sub-item"> <a href="/tin-tuc/tang-follow-tiktok"> Tăng Follow Tiktok</a></li>
-                        <li class="sub-item"> <a href="/tin-tuc/tang-like-tiktok"> Tăng Like Tiktok </a></li>
-                        <li class="sub-item"> <a href="/tin-tuc/tang-view-tiktok"> Tăng View Tiktok </a></li> --}}
-                    </ul>
-                </li>
-                <li class="my-item"> <a href="/@lang('news')" class="navigation__link" >@lang('News')</a> </li>
-                <li class="my-item"> <a href="/@lang('contact')" class="navigation__link">@lang('Contact')</a></li>
-                <li class="my-item"><a href="#"> <a href="/thong-tin-thanh-toan" class="navigation__link">Thông tin thanh toán</a></a></li>
-
-            </ul>
-          </nav>
-    </div>
-    <h3 id="navigation__title" class="navigation__title" style="color:white !important" data-cms="{{app()->getLocale()}}-layouts-app-23">LIÊN HỆ HOTLINE:  0988.50.8769 </h3>
-
-    {{-- language --}}
-    <div class="navigation__language language-picker js-language-picker" data-trigger-class="btn btn--subtle js-tab-focus">
-        <button class="language-picker__button" onclick="toggleDropdown()">
-            <img class="img-fluid" @src="/images/home/flag_{{app()->getLocale()}}.png" alt="image">
-            <em>{{app()->getLocale() == 'en' ? __('English') : __('Vietnamese')}}</em>
-            <svg viewBox="0 0 16 16" class="icon"><polygon points="3,5 8,11 13,5 "></polygon></svg>
-        </button>
-        <div id="language-content" class="dropdown-content">
-            <ul class="language-picker__list">
-                <li>
-                    <a href="/en" title="@lang('English')">
-                        <img class="img-fluid" @src="/images/home/flag_en.png" alt="@lang('English')">
-                        <span>@lang('English')</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/vi" title="@lang('Vietnamese')">
-                        <img class="img-fluid" @src="/images/home/flag_vi.png" alt="@lang('Vietnamese')">
-                        <span>@lang('Vietnamese')</span>
-                    </a>
-                </li>
-            </ul>
+<body data-rsssl=1 class="home page-template page-template-page-blank page-template-page-blank-php page page-id-2 theme-flatsome ot-vertical-menu ot-overplay full-width lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border mobile-submenu-slide mobile-submenu-slide-levels-1 mobile-submenu-toggle elementor-default elementor-kit-17064">
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+<div id="wrapper">
+    {{-- app header --}}
+    @include('home.includes.header')
+    <main id="main" class="">
+        <div id="content" role="main" class="content-area">
+            @yield('content')
         </div>
-    </div>
-
-    {{-- Dark/Light mode --}}
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" {{session('theme') == 'dark' ? 'checked' : '' }}>
-            <div class="slider round">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="0.502638in" height="0.501575in" version="1.1" viewbox="0 0 502.64 501.57">
-                    <g id="Layer_x0020_1">
-                        <metadata id="CorelCorpID_0Corel-Layer"></metadata>
-                        <path class="fil0" d="M500.62 322.06c-38.53,9.01 -72.33,40.44 -155.22,25.45 -51.69,-9.35 -97.71,-37.16 -124.62,-64.83 -63.29,-65.09 -86.84,-158.41 -52.58,-248.15 3.59,-9.4 11.11,-21.61 13.05,-31.98 -85.44,28.76 -144,83.86 -171.61,170.21 -33.74,105.52 11.37,203.76 63.6,257.39 128.48,131.92 374.62,82.21 427.37,-108.09z"></path>
-                    </g>
-                </svg>
-            </div>
-        </label>
-    </div>
-
-    <nav class="navigation__nav">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="navigation__flex">
-                        <div class="navigation__content">
-                            <h4 class="navigation__lable" data-cms="{{app()->getLocale()}}-layouts-app-47">Menu</h4>
-                            <ul class="navigation__list" id="navi-menu">
-                                <li class="navigation__item active">
-                                    <a href="/@lang('about-us')" class="navigation__link">►@lang('About Us')</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <p  class="navigation__link" >►Dịch vụ Facebook</p>
-                                    <ul class="sub-menu">
-                                        <li class="sub-item">
-                                           <a href="/mua-group-facebook">Bán Group Facebook</a>
-                                        </li>
-                                        {{-- <li class="sub-item"> <a href="/tin-tuc/tang-thanh-vien-cho-group"> Tăng thành viên cho Group </a></li> --}}
-                                        <li class="sub-item"> <a href="/mua-fanpage-facebook"> Bán Fanpage Facebook </a></li>
-                                        {{-- <li class="sub-item"> <a href="/tin-tuc/tang-like-cho-fanpage"> Tăng Like cho Fanpage </a></li> --}}
-                                        {{-- <li class="sub-item"> <a href="/tin-tuc/thu-mua-lai-group-facebook"> Thu mua lại Group facebook </a></li>
-                                        <li class="sub-item"> <a href="/tin-tuc/thu-mua-lai-fanpage"> Thu mua lại FanPage </a></li> --}}
-                                    </ul>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="/mua-kenh-tiktok" class="navigation__link" >►Dịch vụ Tiktok</a>
-                                    <ul class="sub-menu">
-                                        <li class="sub-item">
-                                           <a href="/mua-kenh-tiktok">Bán tài khoản Tiktok</a>
-                                        </li>
-                                        {{-- <li class="sub-item">
-                                            <a href="/chuyen-nhuong-lai-kenh-tiktok">Thu mua tài khoản Tiktok</a>
-                                         </li> --}}
-                                        {{-- <li class="sub-item"> <a href="/tin-tuc/tang-follow-tiktok"> Tăng Follow Tiktok</a></li>
-                                        <li class="sub-item"> <a href="/tin-tuc/tang-like-tiktok"> Tăng Like Tiktok </a></li>
-                                        <li class="sub-item"> <a href="/tin-tuc/tang-view-tiktok"> Tăng View Tiktok </a></li> --}}
-                                    </ul>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="/@lang('news')" class="navigation__link" >►@lang('News')</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="/@lang('contact')" class="navigation__link">►@lang('Contact')</a>
-                                </li>
-                                <li class="navigation__item">
-                                    <a href="/thong-tin-thanh-toan" class="navigation__link">►Thông tin thanh toán</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="navigation__flex">
-                        <div class="navigation__content">
-                            <div class="navigation__image">
-                                <img id="menu-image" class="img-fluid" @src="/images/home/menu-about.png" alt="Images" data-cms="{{app()->getLocale()}}-layouts-app-65">
-                            </div>
-                            <div class="navigation__info">
-                                <ul class="navigation-list">
-                                    <li><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{$config->phone}}" title="Số điện thoại" data-cms="{{app()->getLocale()}}-layouts-app-70">0988.50.8769</a></li>
-                                    <li><span data-cms="{{app()->getLocale()}}-layouts-app-73">Email:</span> <a href="mailto:{{$config->email}}" title="Email" data-cms="{{app()->getLocale()}}-layouts-app-74">adgroup.vnn@gmail.com</a></li>
-                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i> <span data-cms="{{app()->getLocale()}}-layouts-app-77">Zalo: 0988508769</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-</div>
-<header id="header" class="header">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-6">
-                <div class="header__logo-box d-flex align-items-center">
-                    <a href="/" title="logo">
-                        <img style="padding:10px" class="img-fluid" @src="/images/home/logo-white.png" alt="{{config('app.name')}}">
-                    </a>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="header__nav"></div>
-            </div>
-        </div>
-    </div>
-</header>
-@yield('content')
-<footer class="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                {{-- <div class="col-12 col-md-4 col-lg-5">
-                    <div class="footer-content">
-                        <h1 style="font-size: 2rem" class="title" data-cms="{{app()->getLocale()}}-layouts-app-93">Thông tin công ty</h1>
-                        <ul class="footer-list">
-
-                        </ul>
-                    </div>
-                </div> --}}
-                <div class="col-12 col-md-4 col-lg-5">
-                    <div class="footer-content">
-                        <h1 style="font-size: 2rem"  class="title">Thông tin công ty</h1>
-                        <ul class="footer-list">
-                            <li><span>CÔNG TY CỔ PHẦN CÔNG NGHỆ TRUYỀN THÔNG MK MEDIA</span></li>
-                            <li><span>Địa chỉ: Số 15A Ngõ 21/13 Lĩnh Nam - Hoàng Mai - Hà Nội</span></li>
-                            <li><span>Mã số thuế: 0109379379</span> </li>
-                            <li><a href="tel:+840988508769" title="Số điện thoại">Hotline: {{$config->phone}}</a></li>
-                            <li><span>Email:</span> <a href="mailto:{{$config->email}}" title="Email" >{{$config->email}}</a></li>
-                            <li><span>Zalo:</span> <a href="https://zalo.me/{{$config->zalo}}" title="Zalo" >{{$config->zalo}}</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-2">
-                    <div class="footer-content">
-                        <h3 class="title">Facebook</h3>
-                        <ul class="footer-list">
-                            <li class="sub-item">
-                                <a href="/mua-group-facebook">Bán Group Facebook</a>
-                             </li>
-                             {{-- <li class="sub-item"> <a href="/tin-tuc/tang-thanh-vien-cho-group"> Tăng thành viên cho Group </a></li> --}}
-                             <li class="sub-item"> <a href="/mua-fanpage-facebook"> Bán Fanpage Facebook </a></li>
-                             {{-- <li class="sub-item"> <a href="/tin-tuc/tang-like-cho-fanpage"> Tăng Like cho Fanpage </a></li> --}}
-                             {{-- <li class="sub-item"> <a href="/tin-tuc/thu-mua-lai-group-facebook"> Thu mua lại Group facebook </a></li>
-                             <li class="sub-item"> <a href="/tin-tuc/Thu mua lại FanPage"> Thu mua lại FanPage </a></li> --}}
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5 col-lg-2">
-                    <div class="footer-content">
-                        <h3 class="title" >Tiktok</h3>
-                        <ul class="footer-list">
-                            <li class="sub-item">
-                                <a href="/mua-kenh-tiktok">Bán tài khoản Tiktok</a>
-                             </li>
-                             {{-- <li class="sub-item">
-                                <a href="/chuyen-nhuong-lai-kenh-tiktok">Thu mua tài khoản Tiktok</a>
-                             </li> --}}
-                             {{-- <li class="sub-item"> <a href="/tin-tuc/tang-follow-tiktok"> Tăng Follow Tiktok</a></li>
-                             <li class="sub-item"> <a href="/tang-like-tiktok"> Tăng Like Tiktok </a></li>
-                             <li class="sub-item"> <a href="/tin-tuc/tang-view-tiktok"> Tăng View Tiktok </a></li> --}}
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-8 col-md-3 col-lg-3">
-                    <div class="footer-content">
-                        <h3 class="title">@lang('Follow us')</h3>
-                        <div class="fb-page" data-href="https://www.facebook.com/ShopGroup.vn" data-tabs="timeline" data-width="" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ShopGroup.vn" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ShopGroup.vn">ShopGroup.vn</a></blockquote></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>@lang('Design by') ShopGroup</p>
-    </div>
-</footer>
-<a id="scrolltop" class="scroll-top" onclick="document.documentElement.scrollIntoView({ behavior: 'smooth' });">
-    <svg class="icon icon-chevron-up"><use xlink:href="#icon-chevron-up"></use></svg>
-</a>
-<div class="overlay" id="modal-overlay"></div>
-<div class="modal" id="modal-form">
-    <button class="modal-close-btn" id="close-btn">
-        <svg class="icon"><use xlink:href="#icon-close"></use></svg>
-    </button>
-</div>
-<div class="box-contact">
-    <div class="hotline-phone" style="display: none;">
-        <div class="ring">
-          <div class="ring-circle"></div>
-          <div class="ring-circle-fill"></div>
-          <div class="ring-img-circle">
-            <a href="tel:+84988508769" class="btn-img">
-              <img src="/images/home/phone.png" width="38">
-            </a>
-          </div>
-        </div>
-        {{-- <div class="bar">
-          <a href="tel:+84899707888">
-            <span class="text-hotline">{{$config->zalo}}</span>
-          </a>
-        </div> --}}
-    </div>
-    <div class="messenger">
-      <div class="ring">
-            <div class="">
-            <a href="https://m.me/ShopGroup.vn" class="btn-img" target="_blank">
-                <img src="/images/home/social-media.png" width="38">
-            </a>
-        </div>
-      </div>
-      <div class="bar">
-        <a href="https://m.me/ShopGroup.vn" target="_blank">
-          <span class="text-hotline">Facebook</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="zalo">
-      <div class="ring">
-            <div class="">
-                <a href="https://zalo.me/{{$config->zalo}}" class="btn-img" target="_blank">
-                <img src="/images/home/communication.png" width="38">
-          </a>
-        </div>
-      </div>
-      <div class="bar">
-        <a href="https://zalo.me/{{$config->zalo}}" target="_blank">
-          <span class="text-hotline">Zalo</span>
-        </a>
-      </div>
-    </div>
+    </main>
+    {{-- @include('home.includes.footer') --}}
 </div>
 
-<script
-  src="/js/home/jquery-3.6.0.min.js"></script>
+<script src="/js/home/jquery-3.6.0.min.js"></script>
 <script async defer crossorigin="anonymous" type="text/javascript" src="/js/home/app.min.js"></script>
+<script type='text/javascript' src="{{ asset('wp-includes/js/dist/vendor/wp-polyfill.min89b1.js?ver=7.4.4') }}" id='wp-polyfill-js'></script>
+<script type='text/javascript' src="{{ asset('wp-content/plugins/contact-form-7/includes/js/index7661.js?ver=5.4.2') }}" id='contact-form-7-js'></script>
+<script type='text/javascript' src="{{ asset('wp-content/plugins/devvn-quick-buy/js/jquery.validate.min784e.js?ver=2.1.6') }}" id='jquery.validate-js'></script>
+<script type='text/javascript' src="{{ asset('wp-includes/js/underscore.min4511.js?ver=1.8.3') }}" id='underscore-js'></script>
+<script type='text/javascript' src="{{ asset('wp-includes/js/wp-util.min3bea.js?ver=5.6.7') }}" id='wp-util-js'></script>
+<script type='text/javascript' src="{{ asset('wp-content/plugins/devvn-quick-buy/js/devvn-quick-buy784e.js?ver=2.1.6') }}" id='devvn-quickbuy-script-js'></script>
+<script type='text/javascript' src="{{ asset('wp-content/plugins/ot-flatsome-vertical-menu/assets/vendor/superfish/hoverIntent9632.js?ver=1.2.3') }}" id='ot-hoverIntent-js'></script>
+<script type='text/javascript' src="{{ asset('wp-content/plugins/ot-flatsome-vertical-menu/assets/vendor/superfish/superfish.min9632.js?ver=1.2.3') }}" id='ot-superfish-js'></script>
+<script type='text/javascript' src="{{ asset('wp-content/plugins/ot-flatsome-vertical-menu/assets/js/ot-vertical-menu.min9632.js?ver=1.2.3') }}" id='ot-vertical-menu-js'></script>
+<script type='text/javascript' src="{{ asset('wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search2916.js?ver=3.13.1') }}" id='flatsome-live-search-js'></script>
+<script type='text/javascript' src="{{ asset('wp-includes/js/hoverIntent.minc245.js?ver=1.8.1') }}" id='hoverIntent-js'></script>
+<script type='text/javascript' id='flatsome-js-js-extra'>
+/* <![CDATA[ */
+var flatsomeVars = {
+	"ajaxurl":"#",
+	"rtl":"","sticky_height":"78",
+	"lightbox":
+	{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},
+		"user":{"can_edit_pages":false},
+		"i18n":{"mainMenu":"Main Menu"},
+		"options":{"cookie_notice_version":"1"}
+	};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{{ asset('wp-content/themes/flatsome/assets/js/flatsome2916.js?ver=3.13.1') }}" id='flatsome-js-js'></script>
+<script type='text/javascript' src="{{ asset('wp-content/themes/flatsome/assets/js/woocommerce2916.js?ver=3.13.1') }}" id='flatsome-theme-woocommerce-js-js'></script>
+<script type='text/javascript' src="{{ asset('wp-includes/js/wp-embed.min3bea.js?ver=5.6.7') }}" id='wp-embed-js'></script>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0&appId=585723972044551&autoLogAppEvents=1" nonce="2spNzV4z"></script>
 @yield('js')
