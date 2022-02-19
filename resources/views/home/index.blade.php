@@ -5,50 +5,55 @@
 @section('css')
 
 <style>
-    .mybox{
-        display: inline-block;
-        width: 28%;
-    }
-    .popup-btn {
-        padding: 7px 19px;
-        border-radius: 2px;
-        background-color: #2196F3;
-        font-size: 20px;
-        border: 1px solid #2196F3;
-        display: block;
-        min-height: 64px;
-        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-        margin: 10px;
-        color: white
-    }
-    .myimg{
-        width: 100px;
-        height: 100px;
-        border-radius: 6px;
-    }
-    .swal2-container .swal2-popup{
-        min-width: 825px ;
-    }
-    @media only screen and (max-width: 600px) {
-        .popup-btn {
-            font-size: 13px;
-            min-height: 32px;
-        }
-        .swal2-container .swal2-popup{
-            min-width: 100% ;
-        }
-        .mybox{
-            width: 100%;
-        }
-        .myimg{
-            width: 80px;
-            height: 80px;
-        }
-    }
+#image_1418508498 {
+    width: 100%;
+}
+#section_1752396927 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+#section_1752396927 .section-bg.bg-loaded {
+    background-image: url(wp-content/uploads/2020/11/bg.png);
+}
 </style>
 @endsection
 @section('content')
-
+@include('home.includes.silder')
+<section class="section" id="section_1752396927">
+    <div class="bg section-bg fill bg-fill bg-loaded"></div>
+    <div class="section-content relative">
+        <div class="row" style="max-width:1280px" id="row-310751448">
+            <div id="col-573082905" class="col medium-6 small-12 large-6">
+                <div class="col-inner text-center">
+                    <p class="thin-font" style="text-align: center;">
+                        <span style="font-family: Utm-american-sans; font-size: 200%;">Giới thiệu</span>
+                    </p>
+                    <h1 style="text-align: center;"><span style="color: #093c4c;" data-cms="{{app()->getLocale()}}-index-1">CÔNG TY TNHH THIÊN ÂN PHÁT</span></h1>
+                    <p style="text-align: justify;" data-cms="{{app()->getLocale()}}-index-2">Phúc Đạt là công ty chuyên sản xuất – thi công lắp đặt nhôm kính, nhôm Xingfa, kính cường lực tại TpHCM; với uy tín, đội ngũ chuyên nghiệp, thi công nhanh chóng &amp; chất lượng, đặc biệt chính sách Bảo hành 12-24 tháng.</p>
+                    <p class="has-normal-font-size" style="text-align: justify;" data-cms="{{app()->getLocale()}}-index-3">Hiện tại chúng tôi cung cấp đa dạng các sản phẩm về nhôm kính. Trong đó có các sản phẩm thế mạnh, cũng là các sản phẩm hiện được cung cấp lắp đặt tên toàn quốc. Bao gồm:</p>
+                    <p class="has-normal-font-size" style="text-align: justify;" data-cms="{{app()->getLocale()}}-index-4">Sản phẩm cửa nhôm: cửa nhôm Xingfa, nhôm hệ 700, cửa nhôm hệ 1000, nhôm Austdoor, Topal, Việt Pháp, Việt Nhật, Xingfa Việt Nam…</p>
+                    <p class="has-normal-font-size" style="text-align: justify;" data-cms="{{app()->getLocale()}}-index-5">Sản phẩm cửa kính: cửa kính cường lực, cửa kính lùa, cửa kính xếp trượt, cửa tự động, bán tự động &amp; các cửa kính theo hệ khung sắt / gỗ / inox.</p>
+                    <a href="#" target="_self" class="button primary is-outline is-smaller" style="border-radius:21px;" data-wpel-link="internal">
+                        <span>Xem thêm</span>
+                    </a>
+                </div>
+            </div>
+            <div id="col-959917025" class="col medium-6 small-12 large-6">
+                <div class="col-inner">
+                    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1418508498">
+                        <div class="img-inner dark">
+                            <img width="595" height="448" src="wp-content/uploads/2021/01/cong-ty-phuc-dat-door.png" class="attachment-large size-large" loading="lazy" sizes="(max-width: 595px) 100vw, 595px">						
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@include('home.category.group-catetory-index')
+@include('home.category.group-sub-catetory')
+@include('home.build.build-finish')
 @endsection
 
 @section('js')

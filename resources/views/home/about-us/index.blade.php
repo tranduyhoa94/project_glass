@@ -2,277 +2,150 @@
 
 @section('title', __('About Us'))
 
+@section('css')
+
+<style>
+#image_1755705099 {
+    width: 70%;
+}
+@media (min-width:550px) {
+    #image_1755705099 {
+        width: 30%;
+    }
+}
+@media (min-width:850px) {
+    #image_1755705099 {
+        width: 30%;
+    }
+}
+#image_666919309 {
+    width: 70%;
+}
+@media (min-width:550px) {
+    #image_666919309 {
+        width: 30%;
+    }
+}
+@media (min-width:850px) {
+    #image_666919309 {
+        width: 30%;
+    }
+}
+#gap-161547613 {
+    padding-top: 10px;
+}
+#col-241380788 > .col-inner {
+    padding: 0px 20px 0px 20px;
+}
+#section_313004647 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#col-1000140759 > .col-inner {
+    padding: 0px 0 0px 0px;
+    margin: 0px 0 0px 0px;
+}
+#row-2093806391 > .col > .col-inner {
+    padding: 0 0px 0px 0px;
+}
+#section_1663773892 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+</style>
+
+@endsection
 @section('content')
-
-<div class="page-wrapper page-about">
-    {{-- Block hero --}}
-    <div class="grid-hero" id="grid-hero">
-        <div class="container">
-            <div class="grid-hero-bg">
-                <div class="row">
-                    <div class="col-11 col-md-8 col-lg-6 col-lx-6">
-                        <div class="grid-hero__wrapp">
-                            <div class="grid-hero__content">
-                                <div class="box-hero">
-                                    <h4 class="sub" data-cms="{{app()->getLocale()}}-about-index-9">Giới thiệu chung</h4>
-                                    <h2 class="title"><span data-cms="{{app()->getLocale()}}-about-index-11">Branding is <br> the</span> <span class="hero" style="text-decoration-line: none;" data-cms="{{app()->getLocale()}}-about-index-12">KEY</span></h2>
-                                </div>
+<section class="section" id="section_313004647">
+    <div class="bg section-bg fill bg-fill bg-loaded"></div>
+    <div class="section-content relative">
+        <div class="row row-collapse" style="max-width:1280px" id="row-1020213882">
+            <div id="col-2120442213" class="col medium-6 large-6">
+                <div class="col-inner text-center">
+                    <h2 style="text-align: center;" data-cms="{{app()->getLocale()}}-into-1"><span style="font-family: robotocondensed-b; color: #000000;">
+                        <strong>CÔNG TY TNHH THIÊN ÂN PHÁT</strong></span>
+                    </h2>
+                    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_666919309">
+                        <div class="img-inner dark" style="margin:-15px 0px 0px 0px;">
+                            <img width="300" height="45" src="../wp-content/uploads/2020/11/Icon-Didver.png" class="attachment-large size-large" alt="" loading="lazy">						
+                        </div>
+                    </div>
+                    <div class="icon-box featured-box icon-box-top text-left">
+                        <div class="icon-box-img" style="width: 167px">
+                            <div class="icon">
+                                <div class="icon-inner"></div>
                             </div>
                         </div>
+                        <div class="icon-box-text last-reset">     
+                            <p data-cms="{{app()->getLocale()}}-into-2"><i class="far fa-bookmark"></i> MST: 0912 974 576</p>
+                            <p data-cms="{{app()->getLocale()}}-into-3"><i class="fas fa-mobile-alt"></i> <strong> 0905.532.506</strong></p>
+                            <p data-cms="{{app()->getLocale()}}-into-4"><i class="far fa-envelope"></i> Email: dtthienanphat@gmail.com</p>
+                            <p data-cms="{{app()->getLocale()}}-into-5"><i class="fas fa-globe-americas"></i> Website: <a href="{{ route('index') }}" data-wpel-link="internal">www.dtthienanphat.com</a></p>
+                            <p data-cms="{{app()->getLocale()}}-into-6"><i class="fas fa-map-marker-alt"></i> Trụ sở: 62 Bàu Gia Thượng 3, Hòa Thọ Đông, Cẩm Lệ, Đà Nẵng</p>
+                            <p data-cms="{{app()->getLocale()}}-into-7"><i class="fas fa-map-marker-alt"></i> Showroom: BP BCG, 40 Bích Khuê, Hòa Xuân, Đà Nẵng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="col-241380788" class="col form-lienhe medium-6 large-6">
+                <div class="col-inner text-center">
+                    <h2 style="text-align: center;"><span style="font-size: 100%; color: #000000; font-family: robotocondensed-b;">LIÊN HỆ VỚI CHÚNG TÔI</span></h2>
+                    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1755705099">
+                        <div class="img-inner dark" style="margin:-15px 0px 0px 0px;">
+                            <img width="300" height="45" src="../wp-content/uploads/2020/11/Icon-Didver.png" class="attachment-large size-large" alt="" loading="lazy">						
+                        </div>
+                    </div>
+                    <div id="gap-161547613" class="gap-element clearfix" style="display:block; height:auto;"></div>
+                    <div role="form" class="wpcf7" id="wpcf7-f14-p39-o1" lang="en-US" dir="ltr">
+                        <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p><ul></ul></div>
+                        <form action="#" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                            @csrf
+                            <div class="form-lien-he">
+                                <div class="row_1">
+                                    <span class="wpcf7-form-control-wrap your-name">
+                                        <input type="text" name="your-name" value="Họ tên..." size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                                    </span><br>
+                                    <span class="wpcf7-form-control-wrap your-email">
+                                        <input type="email" name="your-email" value="Email..." size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false">
+                                    </span>
+                                    <div style="clear:both;"></div>
+                                </div>
+                                <div class="row_2">
+                                    <span class="wpcf7-form-control-wrap your-phone">
+                                        <input type="tel" name="your-phone" value="Số Điện thoại..." size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false">
+                                    </span><br>
+                                    <span class="wpcf7-form-control-wrap your-message">
+                                        <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false">Nội dung...</textarea>
+                                    </span>
+                                    <div style="clear:both;"></div>
+                                </div>
+                                <p>
+                                    <input type="submit" value="GỬI ĐI" class="wpcf7-form-control wpcf7-submit button">
+                                    <span class="ajax-loader"></span>
+                                </p>
+                            </div>
+                            <div class="wpcf7-response-output" aria-hidden="true"></div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    {{-- Block about --}}
-    <div class="grid-about grid-style--arrowdown">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-3 col-lx-3">
-                    <div class="grid-about__head">
-                        <h3 class="grid-about__title">
-                            <span class="hero"><span class="hero-text" data-cms="{{app()->getLocale()}}-about-index-20">A</span></span>
-                            <span data-cms="{{app()->getLocale()}}-about-index-21">PROFESSIONAL MARKETING SOLUTION LEVERAGE YOUR BUSINIESS TO A WHOLE NEW LEVEL</span>
-                        </h3>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-9 col-lx-9">
-                    <div class="grid-about__content">
-                        <div class="row">
-                            <div class="col-6 col-md-3">
-                                <div class="grid-about__item">
-                                    <img class="img-fluid" @src="/images/home/img-about-1.jpg" alt="about 1" data-cms="{{app()->getLocale()}}-about-index-27">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="grid-about__item">
-                                    <img class="img-fluid" @src="/images/home/img-about-2.jpg" alt="about 2" data-cms="{{app()->getLocale()}}-about-index-30">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="grid-about__item">
-                                    <img class="img-fluid" @src="/images/home/img-about-3.jpg" alt="about 3" data-cms="{{app()->getLocale()}}-about-index-33">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="grid-about__item">
-                                    <img class="img-fluid" @src="/images/home/img-about-4.jpg" alt="about 4" data-cms="{{app()->getLocale()}}-about-index-36">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="grid-about__item">
-                                    <img class="img-fluid" @src="/images/home/img-about-5.jpg" alt="about 5" data-cms="{{app()->getLocale()}}-about-index-39">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="grid-about__item">
-                                    <img class="img-fluid" @src="/images/home/img-about-6.jpg" alt="about 6" data-cms="{{app()->getLocale()}}-about-index-42">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="grid-about__item">
-                                    <img class="img-fluid" @src="/images/home/img-about-7.jpg" alt="about 7" data-cms="{{app()->getLocale()}}-about-index-45">
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-3">
-                                <div class="grid-about__item">
-                                    <img class="img-fluid" @src="/images/home/img-about-8.jpg" alt="about 8" data-cms="{{app()->getLocale()}}-about-index-48">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<section class="section" id="section_1663773892">
+    <div class="bg section-bg fill bg-fill bg-loaded"></div>
+    <div class="section-content relative">
+        <div class="row ban-do" style="max-width:1280px" id="row-2093806391">
+            <div id="col-1000140759" class="col small-12 large-12">
+                <div class="col-inner text-center">
+                    <p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.945377886091!2d108.19193271485776!3d16.01635868891358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421a2b90411917%3A0x502b7f176278aa42!2zNjIgQsOgdSBHaWEgVGjGsOG7o25nIDMsIEjDsmEgVGjhu40gxJDDtG5nLCBD4bqpbSBM4buHLCDEkMOgIE7hurVuZyA1NTAwMDA!5e0!3m2!1svi!2s!4v1645257129378!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="allowfullscreen" loading="lazy"></iframe>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-
-    {{-- Block about 2 --}}
-    <div class="grid-about-me">
-        <div class="container">
-            <div class="grid-head">
-                <h2 class="title" data-cms="{{app()->getLocale()}}-about-index-52">Chúng tôi là ShopGroup</h2>
-            </div>
-            <div class="grid-content">
-                <div class="row">
-                    <div class="col-12 col-md-12 col-lg-4 col-lx-4">
-                        <div class="grid-about-me__item">
-                            <div class="grid-about-me__img">
-                                <img class="img-fluid" @src="/images/home/about-me-img-1.png" alt="about me image 1" data-cms="{{app()->getLocale()}}-about-index-58">
-                            </div>
-                            <div class="grid-about-me__content">
-                                <h3 class="grid-about-me__title"><span data-cms="{{app()->getLocale()}}-about-index-61">Vision</span></h3>
-                                <div class="grid-about-me__sapo" data-cms="{{app()->getLocale()}}-about-index-62">With over 10 years of experience and passionate and young developers with high proficiency, We always try our best to improve and innovate our already perfect workflows in order to deliver the best products to even the most difficult clients</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-12 col-lg-4 col-lx-4">
-                        <div class="grid-about-me__item grid-about-me__item-2">
-                            <div class="grid-about-me__img">
-                                <img class="img-fluid" @src="/images/home/about-me-img-2.png" alt="about me image 2" data-cms="{{app()->getLocale()}}-about-index-66">
-                            </div>
-                            <div class="grid-about-me__content">
-                                <h3 class="grid-about-me__title"><span data-cms="{{app()->getLocale()}}-about-index-69">Mission</span></h3>
-                                <div class="grid-about-me__sapo" data-cms="{{app()->getLocale()}}-about-index-70">Our mission is to never stop delivering the best product to our clients. With the ever changing in the digital marketing, we promises that you will get the most suitable solution for your business.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-12 col-lg-4 col-lx-4">
-                        <div class="grid-about-me__item grid-about-me__item-3">
-                            <div class="grid-about-me__img">
-                                <img class="img-fluid" @src="/images/home/about-me-img-3.png" alt="about me image 3" data-cms="{{app()->getLocale()}}-about-index-74">
-                            </div>
-                            <div class="grid-about-me__content">
-                                <h3 class="grid-about-me__title"><span data-cms="{{app()->getLocale()}}-about-index-77">Value</span></h3>
-                                <div class="grid-about-me__sapo" data-cms="{{app()->getLocale()}}-about-index-78">Data Protection, individual voices and team work are the core of our Company. We always listen and try our best to create a professional working enviroment for our members and our clients</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{-- Block partner --}}
-    <div class="grid-partner">
-        <div class="container">
-            <div class="grid-head">
-                <h2 class="title" data-cms="{{app()->getLocale()}}-about-index-82">Some friends we’ve made in the process.</h2>
-            </div>
-            <div class="grid-content">
-                <div class="row">
-                    <div class="col-6 col-md-3">
-                        <div class="box-partner">
-                            <img class="img-fluid" @src="/images/home/partner-img-1.png" alt="partner 1" data-cms="{{app()->getLocale()}}-about-index-87">
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="box-partner">
-                            <img class="img-fluid" @src="/images/home/partner-img-2.png" alt="partner 2" data-cms="{{app()->getLocale()}}-about-index-90">
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="box-partner">
-                            <img class="img-fluid" @src="/images/home/partner-img-3.png" alt="partner 3" data-cms="{{app()->getLocale()}}-about-index-93">
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="box-partner">
-                            <img class="img-fluid" @src="/images/home/partner-img-4.png" alt="partner 4" data-cms="{{app()->getLocale()}}-about-index-96">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{-- Block support --}}
-    <div class="grid-support">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-12 col-lg-4 col-lx-4">
-                    <div class="grid-support__title">
-                        <span data-cms="{{app()->getLocale()}}-about-index-102">BUSINESS</span>
-                        <span data-cms="{{app()->getLocale()}}-about-index-103">SUPPORTING</span>
-                        <span data-cms="{{app()->getLocale()}}-about-index-104">SERVICE FROM</span>
-                        <span data-cms="{{app()->getLocale()}}-about-index-105">ShopGroup</span>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-8 col-lx-8">
-                    <div class="grid-support__content">
-                        <ul class="support-list">
-                            <li>
-                                <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                                <span data-cms="{{app()->getLocale()}}-about-index-112">Marketing solution consultation</span>
-                            </li>
-                            <li>
-                                <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                                <span data-cms="{{app()->getLocale()}}-about-index-116">Web Design, App, Solfware and <br> running a website</span>
-                            </li>
-                            <li>
-                                <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                                <span data-cms="{{app()->getLocale()}}-about-index-120">Logo Design/POSM</span>
-                            </li>
-                            <li>
-                                <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                                <span data-cms="{{app()->getLocale()}}-about-index-124">Domain/ Hosting/ Server/ Email</span>
-                            </li>
-                            <li>
-                                <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                                <span data-cms="{{app()->getLocale()}}-about-index-128">Digital Marketing/ SEO/ Google Adword,<br> Ads Facebook, Instagram</span>
-                            </li>
-                            <li>
-                                <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                                <span data-cms="{{app()->getLocale()}}-about-index-132">Video Viral, Video Marketing</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{-- Block reason --}}
-    <div class="grid-reason">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-12 col-lg-6 col-lx-6 d-flex align-items-end">
-                    <div class="grid-reason__title">
-                        <span class="hero"><span class="hero-text" data-cms="{{app()->getLocale()}}-about-index-139">6</span></span>
-                        <span class="text" data-cms="{{app()->getLocale()}}-about-index-140">REASONS TO <br> CHOOSE ShopGroup</span>
-                    </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-6 col-lx-6">
-                    <div class="grid-reason__image">
-                       <img class="img-fluid" @src="/images/home/reason-image.png" alt="image reason" data-cms="{{app()->getLocale()}}-about-index-143">
-                    </div>
-                </div>
-            </div>
-            <div class="grid-reason__list">
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <div class="grid-reason__list-item">
-                            <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                            <span data-cms="{{app()->getLocale()}}-about-index-150">Lightnight support</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="grid-reason__list-item">
-                            <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                            <span data-cms="{{app()->getLocale()}}-about-index-155">Clear direction</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="grid-reason__list-item">
-                            <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                            <span data-cms="{{app()->getLocale()}}-about-index-160">Data protection</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="grid-reason__list-item">
-                            <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                            <span data-cms="{{app()->getLocale()}}-about-index-165">Unique design</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="grid-reason__list-item">
-                            <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                            <span data-cms="{{app()->getLocale()}}-about-index-170">Efficency</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="grid-reason__list-item">
-                            <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
-                            <span data-cms="{{app()->getLocale()}}-about-index-175">Passionate member</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{-- Block action --}}
-    @include('home.includes.consultation')
-</div>
+</section>
 
 @endsection

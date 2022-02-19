@@ -134,15 +134,15 @@ padding-top: 0.5em;
     min-height:50px;
     background: #c0bebe38;
 border:none;
-color:white;
+color:black;
 resize:none;
 border-radius:0 20px 20px 0;
 }
 .form-lien-he input{
-    background: #c0bebe38;
+background: #c0bebe38;
 border:none;
 height:50px;
-color:white;
+color:black;
 }
 .form-lien-he .your-name input{
 border-radius:20px 0 0 20px;
@@ -182,8 +182,8 @@ background-image: url(wp-content/uploads/2020/11/contact_form.png);
 }
 .mfp-content .sidebar-menu .nav-sidebar .html .menu-topbar li a{
         padding: 12px 20px !important;
-border-bottom: 1px solid #ececec;
-}
+        border-bottom: 1px solid #ececec;
+    }
 }
 
     .wpf-center {
@@ -210,7 +210,7 @@ border-bottom: 1px solid #ececec;
             @yield('content')
         </div>
     </main>
-    {{-- @include('home.includes.footer') --}}
+    @include('home.includes.footer')
 </div>
 
 <script src="/js/home/jquery-3.6.0.min.js"></script>

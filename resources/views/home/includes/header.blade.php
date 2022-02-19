@@ -7,7 +7,7 @@
                     <li class="html custom html_topbar_left">
                       <div class="title-topbar">
                         <div class="">THI CÔNG CHUYÊN NGHIỆP</br> BẢO HÀNH CHẤT LƯỢNG</div>
-                        <a href="tel:0901116118" data-wpel-link="internal">Hotline: 0901116118</a>
+                        <a href="tel:0905532506" data-wpel-link="internal">Hotline: 0905.532.506</a>
                       </div>
                     </li>
                 </ul>
@@ -18,7 +18,7 @@
                     <li class="header-search-form search-form html relative has-icon">
                       <div class="header-search-form-wrapper">
                         <div class="searchform-wrapper ux-search-box relative is-normal">
-                          <form role="search" method="get" class="searchform" action="https://phucdatdoor.vn/">
+                          <form role="search" method="get" class="searchform" action="#">
                             <div class="flex-row relative">
                               <div class="flex-col flex-grow">
                                 <label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm kiếm:</label>
@@ -44,9 +44,9 @@
   <div id="masthead" class="header-main nav-dark">
     <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
       <div id="logo" class="flex-col logo">
-        <a href="index.html" title="Phúc Đạt Door - Chuyên thi công lắp đặt nhôm kính, nhôm Xingfa" rel="home" data-wpel-link="internal">
-          <img width="192" height="80" src="wp-content/uploads/2020/12/Phuc-Dat-logo-Final-06.png" class="header_logo header-logo" alt="Phúc Đạt Door"/>
-          <img  width="192" height="80" src="wp-content/uploads/2020/12/Phuc-Dat-logo-Final-06.png" class="header-logo-dark" alt="Phúc Đạt Door"/>
+        <a href="{{ route('index') }}" title="Thiên Ân Phát - Chuyên thi công lắp đặt nhôm kính, nhôm Xingfa" rel="home" data-wpel-link="internal">
+          <img width="192" height="80" src="wp-content/uploads/2020/12/logo-thien-an-phat.png" class="header_logo header-logo" alt="Thiên ân phát"/>
+          <img  width="192" height="80" src="wp-content/uploads/2020/12/logo-thien-an-phat.png" class="header-logo-dark" alt="Thiên ân phát"/>
         </a>
       </div>
 
@@ -142,3 +142,47 @@
     <div class="header-bg-color fill"></div>
   </div>
 </header>
+
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide mobile-sidebar-slide mobile-sidebar-levels-1" data-levels="1">
+	<div class="sidebar-menu no-scrollbar ">
+		<ul class="nav nav-sidebar nav-vertical nav-uppercase nav-slide">
+			<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-999"><a href="index.html" aria-current="page" data-wpel-link="internal">Trang Chủ</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13623"><a href="san-pham/cua-nhom-xingfa/index.html" data-wpel-link="internal">Cửa nhôm Xingfa</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13625"><a href="san-pham/cua-kinh-cuong-luc/index.html" data-wpel-link="internal">Cửa kính cường lực</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-13626"><a href="danh-muc-san-pham/nhom-kinh/index.html" data-wpel-link="internal">Nhôm Kính</a>
+				<ul class="sub-menu nav-sidebar-ul children">
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13627"><a href="san-pham/cua-nhom-xingfa/index.html" data-wpel-link="internal">Cửa nhôm Xingfa nhập khẩu</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13628"><a href="san-pham/mat-dung-nhom-kinh/index.html" data-wpel-link="internal">Mặt dựng nhôm kính</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13629"><a href="san-pham/vach-nhom-kinh/index.html" data-wpel-link="internal">Vách nhôm kính</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13630"><a href="san-pham/bao-gia-tu-bep-nhom-kinh-dep/index.html" data-wpel-link="internal">Tủ bếp nhôm kính</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13631"><a href="san-pham/cua-cuon-mitadoor/index.html" data-wpel-link="internal">Cửa cuốn Mitadoor</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13633"><a href="san-pham/cua-nhom-cau-cach-nhiet/index.html" data-wpel-link="internal">Nhôm cầu cách nhiệt</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13634"><a href="san-pham/tu-bep-nhom-omega/index.html" data-wpel-link="internal">Tủ bếp nhôm Omega</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13635"><a href="san-pham/phu-kien-kin-long-cua-nhom-xingfa/index.html" data-wpel-link="internal">Phụ kiện nhôm Xingfa</a></li>
+				</ul>
+			</li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-13637"><a href="danh-muc-san-pham/kinh-cuong-luc/index.html" data-wpel-link="internal">Kính Cường Lực</a>
+				<ul class="sub-menu nav-sidebar-ul children">
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13638"><a href="san-pham/bao-gia-kinh-cuong-luc-10mm-12mm-8mm/index.html" data-wpel-link="internal">Báo giá kính cường lực 2022</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13639"><a href="san-pham/cua-kinh-cuong-luc/index.html" data-wpel-link="internal">Cửa kính cường lực</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13640"><a href="san-pham/cua-kinh-lua/index.html" data-wpel-link="internal">Cửa kính lùa</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13641"><a href="san-pham/cua-kinh-lua-xep/index.html" data-wpel-link="internal">Cửa kính xếp trượt</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13642"><a href="san-pham/bao-gia-cua-kinh-thuy-luc/index.html" data-wpel-link="internal">Cửa kính thủy lực</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13643"><a href="san-pham/vach-kinh-cuong-luc/index.html" data-wpel-link="internal">Vách kính cường lực</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13644"><a href="san-pham/bao-gia-lan-can-kinh-cuong-luc/index.html" data-wpel-link="internal">Báo giá lan can kính cường lực</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13645"><a href="san-pham/phong-tam-kinh-vach-tam-kinh-cuong-luc/index.html" data-wpel-link="internal">Vách kính phòng tắm</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13646"><a href="san-pham/cau-thang-kinh-cuong-luc-gia-re/index.html" data-wpel-link="internal">Cầu thang kính cường lực</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13647"><a href="san-pham/kinh-mau-op-bep/index.html" data-wpel-link="internal">Kính ốp bếp</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-13648"><a href="san-pham/mai-kinh-cuong-luc/index.html" data-wpel-link="internal">Mái kính cường lực</a></li>
+				</ul>
+			</li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-13670"><a href="cong-trinh-tieu-bieu/index.html" data-wpel-link="internal">Công trình</a></li>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1412"><a href="goc-tu-van/index.html" data-wpel-link="internal">Tư vấn</a>
+				<ul class="sub-menu nav-sidebar-ul children">
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13439"><a href="gioi-thieu/index.html" data-wpel-link="internal">Giới thiệu</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13344"><a href="lien-he/index.html" data-wpel-link="internal">Liên hệ</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
