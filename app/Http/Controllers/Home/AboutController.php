@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Page;
 
 class AboutController extends Controller
 {
@@ -12,6 +13,18 @@ class AboutController extends Controller
         if (request()->path() != trans($path)) {
             return redirect(trans($path));
         }
-        return view('home.' . $path . '.index');
+       
+        $page = Page::where('slug','like', '%' . request()->path() . '%')->first()->toArray();
+
+        return view('home.' . $path . '.index', ['page' => $page]);
+    }
+
+    public function getPage($page)
+    {
+        $path = 'about-us';
+        
+        $page = Page::where('slug','like', '%' . $page . '%')->first()->toArray();
+
+        return view('home.' . $path . '.index', ['page' => $page]);
     }
 }

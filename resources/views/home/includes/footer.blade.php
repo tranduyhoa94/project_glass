@@ -52,27 +52,19 @@
               <li id="nav_menu-2" class="widget widget_nav_menu">
                 <div class="menu-dieu-khoan-su-dung-container">
                   <ul id="menu-dieu-khoan-su-dung" class="menu">
-                    <li id="menu-item-1368" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1368">
-                      <a href="#" data-wpel-link="internal">Chính sách và quy định chung</a>
-                    </li>
-                    <li id="menu-item-1367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1367">
-                      <a href="#" data-wpel-link="internal">Quy định và hình thức thanh toán</a>
-                    </li>
-                    <li id="menu-item-1366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1366">
-                      <a href="#" data-wpel-link="internal">Chính sách vận chuyển và giao hàng</a>
-                    </li>
-                    <li id="menu-item-13667" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-13667">
-                      <a href="#" data-wpel-link="internal">Chính sách bảo mật thông tin</a>
-                    </li>
-                    <li id="menu-item-1364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1364">
-                      <a href="#" data-wpel-link="internal">Chính sách đổi trả và bảo hành</a>
-                    </li>
+                    @if ($pages)
+                      @foreach ($pages as $item)
+                      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                        <a href="{{ route('page', [$item['slug']]) }}" data-wpel-link="internal">{{ $item['name'] }}</a>
+                      </li>
+                      @endforeach
+                    @endif
                   </ul>
                 </div>
               </li>
             </ul>
             <p><a href="http://online.gov.vn/Home/WebDetails/67375" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
-              <img alt='' title='' src='wp-content/uploads/2020/06/logoSaleNoti.png'/></a>
+              <img alt='' title='' src='wp-content/uploads/2020/11/logoSaleNoti.png'/></a>
             </p>
           </div>
           <style>

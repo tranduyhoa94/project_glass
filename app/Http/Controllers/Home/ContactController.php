@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Contact;
+use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
@@ -13,5 +15,17 @@ class ContactController extends Controller
             return redirect(trans($path));
         }
         return view('home.' . $path . '.index');
+    }
+
+    public function createContact(Request $request)
+    {
+        $input = $request->all();
+        $contract = Contact::create($input);
+
+        return response([
+            'data' => $contract,
+            'success' => true,
+            'message' => ''
+        ], 200);
     }
 }

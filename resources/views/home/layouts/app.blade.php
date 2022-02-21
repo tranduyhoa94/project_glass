@@ -10,6 +10,7 @@
     <meta name="twitter:image" content="@yield('cover', '/images/home/logo-white.png')"/>
     <meta property="og:url" content=" {{  Request::url() }} "/>
     <meta property="og:type" content=" {{  Request::url() }} "/>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     @isset($seo)
         <title>{{$seo->title}}</title>
         <meta name="description" content="{{$seo->description}}">
@@ -214,6 +215,13 @@ background-image: url(wp-content/uploads/2020/11/contact_form.png);
 </div>
 
 <script src="/js/home/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+</script>
 <script async defer crossorigin="anonymous" type="text/javascript" src="/js/home/app.min.js"></script>
 <script type='text/javascript' src="{{ asset('wp-includes/js/dist/vendor/wp-polyfill.min89b1.js?ver=7.4.4') }}" id='wp-polyfill-js'></script>
 <script type='text/javascript' src="{{ asset('wp-content/plugins/contact-form-7/includes/js/index7661.js?ver=5.4.2') }}" id='contact-form-7-js'></script>

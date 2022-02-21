@@ -29,12 +29,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('info', function() { phpinfo(); });
 
 Route::get('', [HomeController::class, 'index'])->name('index');
-Route::get('{aboutUs}', [AboutController::class, 'index'])->where('aboutUs', 'about-us|gioi-thieu-chung');
-Route::get('{websiteDesign}', [WebsiteController::class, 'index'])->where('websiteDesign', 'website-design|thiet-ke-website');
-Route::get('{contact}', [ContactController::class, 'index'])->where('contact', 'contact|lien-he');
+Route::get('{aboutUs}', [AboutController::class, 'index'])->where('aboutUs', 'about-us|gioi-thieu')->name('about-us');
+Route::get('{page}', [AboutController::class, 'getPage'])->name('page');
+Route::get('phuong-thuc/{contact}', [ContactController::class, 'index'])->where('contact', 'contact|lien-he')->name('get-contact');
 Route::get('{news}', [PostController::class, 'index'])->where('news', 'news|tin-tuc');
 Route::get('{news}/{post:slug}', [PostController::class, 'detail'])->where('news', 'news|tin-tuc');
 Route::post('customer', [CustomerController::class, 'store']);
+Route::post('/lien-he', [ContactController::class, 'createContact'])->where('contact', 'contact|lien-he')->name('create-contact');
 Route::post('cms', [CmsController::class, 'index']);
 
 Route::get('{locale}', [LocalizationController::class, 'set'])->name('locale')->where('locale', 'en|vi');

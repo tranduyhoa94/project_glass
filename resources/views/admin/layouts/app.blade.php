@@ -143,13 +143,13 @@
                             </a>
                         </li>
                         @endif
-                        {{-- @if(Route::has('slide.index'))
+                        @if(Route::has('slide.index'))
                             <li class="sidebar-item">
                                 <a class="sidebar-link waves-effect waves-dark" href="{{route('slide.index')}}" aria-expanded="false">
                                     <i class="ti-layout-slider-alt"></i><span class="hide-menu">@lang('Slide')</span>
                                 </a>
                             </li>
-                        @endif --}}
+                        @endif
                         @if(Route::has('post.index'))
                             <li class="sidebar-item">
                                 <a class="sidebar-link waves-effect waves-dark has-arrow" href="javascript:void(0)" aria-expanded="false">

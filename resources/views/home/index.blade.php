@@ -16,6 +16,9 @@
 #section_1752396927 .section-bg.bg-loaded {
     background-image: url(wp-content/uploads/2020/11/bg.png);
 }
+.header.show-on-scroll, .stuck .header-main {
+    height: 78px!important;
+}
 </style>
 @endsection
 @section('content')
@@ -34,7 +37,7 @@
                     <p class="has-normal-font-size" style="text-align: justify;" data-cms="{{app()->getLocale()}}-index-3">Hiện tại chúng tôi cung cấp đa dạng các sản phẩm về nhôm kính. Trong đó có các sản phẩm thế mạnh, cũng là các sản phẩm hiện được cung cấp lắp đặt tên toàn quốc. Bao gồm:</p>
                     <p class="has-normal-font-size" style="text-align: justify;" data-cms="{{app()->getLocale()}}-index-4">Sản phẩm cửa nhôm: cửa nhôm Xingfa, nhôm hệ 700, cửa nhôm hệ 1000, nhôm Austdoor, Topal, Việt Pháp, Việt Nhật, Xingfa Việt Nam…</p>
                     <p class="has-normal-font-size" style="text-align: justify;" data-cms="{{app()->getLocale()}}-index-5">Sản phẩm cửa kính: cửa kính cường lực, cửa kính lùa, cửa kính xếp trượt, cửa tự động, bán tự động &amp; các cửa kính theo hệ khung sắt / gỗ / inox.</p>
-                    <a href="#" target="_self" class="button primary is-outline is-smaller" style="border-radius:21px;" data-wpel-link="internal">
+                    <a href="{{ route('about-us', ['gioi-thieu']) }}" target="_self" class="button primary is-outline is-smaller" style="border-radius:21px;" data-wpel-link="internal">
                         <span>Xem thêm</span>
                     </a>
                 </div>
@@ -54,7 +57,34 @@
 @include('home.category.group-catetory-index')
 @include('home.category.group-sub-catetory')
 @include('home.build.build-finish')
+@include('home.includes.form-contact')
 @endsection
 
 @section('js')
+<script>
+    $(document).ready(function() {
+        $('.contact100-form-btn').click(function (e) {
+            e.preventDefault();
+            $('.wrap-contact100 .loader').removeClass('hidden');
+            $('.wrap-contact100 .block-form').addClass('hidden');
+            $.ajax({
+                type: 'post',
+                url: "{{ route('create-contact') }}",
+                data: $('.contact100-form').serialize(),
+                success: function (res) {
+                    if (res.success) {
+                        $('.wrap-contact100 .loader').addClass('hidden');
+                        $('.wrap-contact100 .block-form').removeClass('hidden');
+                    }
+                    $('.contact100-form')[0].reset()
+                },
+                error:function(){ 
+                    $('.contact100-form')[0].reset()
+                    $('.wrap-contact100 .loader').addClass('hidden');
+                    $('.wrap-contact100 .block-form').removeClass('hidden');
+                }
+            });
+        });
+    });
+</script>
 @endsection

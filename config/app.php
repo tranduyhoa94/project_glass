@@ -178,7 +178,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\RepositoryServiceProvider::class,
 
-        Jenssegers\Agent\AgentServiceProvider::class
+        Jenssegers\Agent\AgentServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class
     ],
 
     /*
