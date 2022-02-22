@@ -8,6 +8,10 @@
             <input type="hidden" name="language" value="{{app()->getLocale()}}" />
             <x-input name="name" label="Category Name" required />
             <x-select name="category_id" label="Parent Category" :option-list="$categoryFlatList" />
+            @php
+                $setStart = json_decode(json_encode([['id' => '1', 'name' => 'Nổi bật'], ['id' => '0', 'name' => 'Không nổi bật']]));
+            @endphp
+            <x-select name="set_start"  label="Hiện Trang Chủ" required :option-list="$setStart" />
             <x-textarea name="content" label="Description" rows="3" />
             <button type="submit" class="btn btn-success waves-effect waves-light mr-2">@lang('Save')</button>
         </form>

@@ -21,10 +21,15 @@
                                     @if(Route::has('category.index'))
                                     <x-select name="category_id" value="{{$post->category->first()->id}}" label="Categories" :option-list="$categoryList" required />
                                     @endif
-                                    <x-input name="name" value="{{$post->name}}" label="Title" class="no" required />
+                                    <x-input name="name" value="{{$post->name}}" label="Title" required />
+                                    @php
+                                       $setStart = json_decode(json_encode([['id' => '0', 'name' => 'Bài Viết'], ['id' => '1', 'name' => 'Công Trình']]));
+                                    @endphp
+                                    <x-select name="type"  value="{{$post->type ?? 0}}" label="Hiện Trang Chủ" required :option-list="$setStart" />
                                 </div>
                             </div>
                         </div>
+                        <x-summernote name="sort_description" value="{{$post->sort_description}}" label="Nội dung ngắn" />
                         <x-summernote name="content" value="{{$post->content}}" label="Content" />
                         @editseo
                         <button type="submit" class="btn btn-success waves-effect waves-light mr-2">@lang('Save')</button>

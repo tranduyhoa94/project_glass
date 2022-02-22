@@ -14,9 +14,6 @@
                             <thead>
                             <tr>
                                 <th></th>
-                                <th>@lang('Domain')</th>
-                                <th>@lang('Theme')</th>
-                                <th>@lang('Language')</th>
                                 <th>@lang('Company')</th>
                                 <th>@lang('Name')</th>
                                 <th>@lang('Phone number')</th>
@@ -31,9 +28,6 @@
                             @forelse($customerList as $customer)
                                 <tr>
                                     <td>{{$customer->id}}</td>
-                                    <td>{{$customer->domain}}</td>
-                                    <td>{{$customer->theme}}</td>
-                                    <td>{{$customer->language}}</td>
                                     <td>{{$customer->company}}</td>
                                     <td>{{$customer->name}}</td>
                                     <td>{{$customer->phone}}</td>

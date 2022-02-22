@@ -32,7 +32,7 @@
         </div>
     </div>
     <div id="main-wrapper">
-        <header class="topbar">
+        <header class="topbar" style="z-index: 600;">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header">
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">

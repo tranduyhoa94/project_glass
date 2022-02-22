@@ -14,12 +14,14 @@ class CustomerController extends Controller
 {
     public function store(Request $request)
     {
-        $request['domain'] = $request->getHost();
-        $request['theme'] = session('theme');
-        $request['language'] = session('locale');
         $customer = Customer::create($request->all());
 
-        Notification::route('mail', 'adgroup.vnn@gmail.com')->notify(new CustomerNotification($customer));
+        return response([
+            'data' => $customer,
+            'success' => true,
+            'message' => ''
+        ], 200);
+        // Notification::route('mail', 'adgroup.vnn@gmail.com')->notify(new CustomerNotification($customer));
         return true;
 
     }

@@ -6,9 +6,6 @@
                 <form method="POST" action="{{route('customer.update', $customer->id)}}" class="floating-labels mt-4">
                     @csrf
                     @method('PUT')
-                    <x-input name="domain" value="{{$customer->domain}}" label="Domain" />
-                    <x-input name="theme" value="{{$customer->theme}}" label="Theme" />
-                    <x-input name="language" value="{{$customer->language}}" label="Language" />
                     <x-input name="company" value="{{$customer->company}}" label="Company" />
                     <x-input name="name" value="{{$customer->name}}" label="Name" />
                     <x-input name="phone" value="{{$customer->phone}}" label="Phone number" />

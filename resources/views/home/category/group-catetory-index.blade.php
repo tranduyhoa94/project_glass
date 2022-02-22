@@ -11,7 +11,7 @@
                 <div class="col-inner"  >
                     <h2 class="title-main" style="text-align: center;"><span style="font-family: robotocondensed-b; font-size: 100%;">DÒNG SẢN PHẨM CHÍNH</span></h2>
                     <p>
-                        <img loading="lazy" class="size-full wp-image-1018 aligncenter" src="wp-content/uploads/2020/12/bgtitle.png" alt="" width="163" height="14" sizes="(max-width: 163px) 100vw, 163px" /></p>
+                        <img loading="lazy" class="size-full wp-image-1018 aligncenter" src="{{ asset('wp-content/uploads/2020/12/bgtitle.png') }}" alt="" width="163" height="14" sizes="(max-width: 163px) 100vw, 163px" /></p>
                     <div id="gap-1696736364" class="gap-element clearfix" style="display:block; height:auto;">
                     </div>
                     <div class="row box-img-cong-trinh large-columns-4 medium-columns-3 small-columns-2 row-small slider row-slider slider-nav-simple slider-nav-outside"  data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : 3000}'>
@@ -19,7 +19,7 @@
                             @foreach ($countPostCategory as $item)
                             <div class="product-category col" >
                                 <div class="col-inner">
-                                    <a href="danh-muc-san-pham/san-pham-khac/index.html" data-wpel-link="internal"> 
+                                    <a href="{{ route('post-category', ['tin-tuc', $item['slug']]) }}" data-wpel-link="internal"> 
                                         <div class="box box-category has-hover box-shade dark ">
                                             <div class="box-image" >
                                                 <div class="image-cover" style="padding-top:100%;">

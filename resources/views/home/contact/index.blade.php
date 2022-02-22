@@ -3,7 +3,6 @@
 @section('title', __('About Us'))
 
 @section('css')
-
 <style>
 #image_1755705099 {
     width: 70%;
@@ -99,33 +98,33 @@
                     <div id="gap-161547613" class="gap-element clearfix" style="display:block; height:auto;"></div>
                     <div role="form" class="wpcf7" id="wpcf7-f14-p39-o1" lang="en-US" dir="ltr">
                         <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p><ul></ul></div>
-                        <form action="#" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                        <form action="#" method="post" class="wpcf7-form init validate-form" novalidate="novalidate" data-status="init">
                             @csrf
                             <div class="form-lien-he">
                                 <div class="row_1">
                                     <span class="wpcf7-form-control-wrap your-name">
-                                        <input type="text" name="your-name" value="Họ tên..." size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                                        <input type="text" name="name" placeholder="Họ tên..." required size="40" class="wpcf7-form-control wpcf7-text wpcf7-name">
                                     </span><br>
                                     <span class="wpcf7-form-control-wrap your-email">
-                                        <input type="email" name="your-email" value="Email..." size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false">
+                                        <input type="email" name="email" placeholder="Email..." required size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email">
                                     </span>
                                     <div style="clear:both;"></div>
                                 </div>
                                 <div class="row_2">
                                     <span class="wpcf7-form-control-wrap your-phone">
-                                        <input type="tel" name="your-phone" value="Số Điện thoại..." size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false">
+                                        <input type="tel" name="phone" placeholder="Số Điện thoại..." required size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel">
                                     </span><br>
                                     <span class="wpcf7-form-control-wrap your-message">
-                                        <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false">Nội dung...</textarea>
+                                        <textarea name="content" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Nội dung..."></textarea>
                                     </span>
                                     <div style="clear:both;"></div>
                                 </div>
                                 <p>
-                                    <input type="submit" value="GỬI ĐI" class="wpcf7-form-control wpcf7-submit button">
-                                    <span class="ajax-loader"></span>
+                                    <input type="button" value="GỬI ĐI" class="wpcf7-form-control wpcf7-submit button">
                                 </p>
                             </div>
-                            <div class="wpcf7-response-output" aria-hidden="true"></div>
+                            <div class="wpcf7-response-output hidden">Có một hoặc nhiều mục nhập có lỗi. Vui lòng kiểm tra và thử lại.</div>
+                            <div class="wpcf7-response-success hidden">Cảm ơn bạn đã liên lạc với chúng tôi.</div>
                         </form>
                     </div>
                 </div>
@@ -149,4 +148,42 @@
     </div>
 </section>
 
+@endsection
+@section('js')
+<script>
+    $(document).ready(function() {
+        $('.wpcf7-submit').click(function (e) {
+            e.preventDefault();
+            $('.form-lien-he').removeClass('processing');
+            var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+            var name = $('.wpcf7-name').val().trim();
+            var email = $('.wpcf7-email').val().trim();
+            if (name == "" || !pattern.test(email)) {
+                $('.wpcf7-response-output').removeClass('hidden');
+            } else {
+                $('.wpcf7-response-output').addClass('hidden');
+                $('.form-lien-he').addClass('processing');
+                $.ajax({
+                    type: 'post',
+                    url: "{{ route('create-contact') }}",
+                    data: $('.wpcf7-form').serialize(),
+                    success: function (res) {
+                        $('.form-lien-he').removeClass('processing');
+                        $('.wpcf7-form')[0].reset()
+                        $('.wpcf7-response-success').removeClass('hidden');
+                        setTimeout(() => {
+                            $('.wpcf7-response-success').addClass('hidden');
+                        }, 3000);
+
+                    },
+                    error:function() { 
+                        $('.form-lien-he').removeClass('processing');
+                        $('.wpcf7-form')[0].reset()
+                    }
+                });
+            }
+           
+        });
+    });
+</script>
 @endsection

@@ -1,18 +1,36 @@
-<div class="grid-news--btn">
-    <div class="btn-normal">
-        @if ($paginator->hasPages())
-            @if (!$paginator->onFirstPage())
-                <a href="{{ $paginator->previousPageUrl() }}" title="@lang('Previous page')">
-                    <span class="btn-normal__title">@lang('Previous page')</span>
-                </a>
+<div class="container">
+    <nav class="woocommerce-pagination">
+        <ul class="page-numbers nav-pagination links text-center">
+            @if ($paginator->hasPages())
+                @if (!$paginator->onFirstPage())
+                    <li>
+                        <a class="prev page-number" href="{{ $paginator->previousPageUrl() }}" data-wpel-link="internal">
+                            <i class="icon-angle-left"></i>
+                        </a>
+                    </li>
+                @endif
+                @foreach ($elements as $element)
+                    @if (is_string($element))
+                        <li class="disabled"><span>{{ $element }}</span></li>
+                    @endif
+                    @if (is_array($element))
+                        @foreach ($element as $page => $url)
+                            @if ($page == $paginator->currentPage())
+                                <li>
+                                    <a class="page-number current" href="{{ $url }}" data-wpel-link="internal">1</a>
+                                </li>
+                            @else
+                                <li><a href="{{ $url }}">{{ $page }}</a></li>
+                            @endif
+                        @endforeach
+                    @endif
+                @endforeach
+                @if ($paginator->hasMorePages())
+                    <li>
+                        <a class="next page-number" href="{{ $paginator->nextPageUrl() }}" data-wpel-link="internal"><i class="icon-angle-right"></i></a>
+                    </li>
+                 @endif
             @endif
-
-            @if ($paginator->hasMorePages())
-                <a href="{{ $paginator->nextPageUrl() }}" title="@lang('Next page')">
-                    <span class="btn-normal__title">@lang('Next page')</span>
-                    <svg class="icon"><use xlink:href="#icon-arrow"></use></svg>
-                </a>
-            @endif
-        @endif
-    </div>
+        </ul>
+    </nav>
 </div>

@@ -12,7 +12,8 @@ class HomeController extends Controller
     {
         $agent = new Agent();
         $countPostCategory = Category::with('postList')->whereNull('category_id')->get()->toArray();
-
-        return view('home.index', compact('agent', 'countPostCategory'));
+        $categoryStart = Category::with('postList')->where('set_start', 1)->get()->toArray();
+        
+        return view('home.index', compact('agent', 'countPostCategory', 'categoryStart'));
     }
 }

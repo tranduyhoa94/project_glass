@@ -1,7 +1,11 @@
 @extends('admin.layouts.app')
 
 @section('title', __('New Post'))
+@section('css')
+<style>
 
+</style>   
+@endsection
 @section('content')
     <div class="row">
         <div class="col-12">
@@ -19,10 +23,15 @@
                                     @if(Route::has('category.index'))
                                     <x-select name="category_id" label="Categories" :option-list="$categoryList" required />
                                     @endif
-                                    <x-input name="name" label="Title" class="no" required />
+                                    <x-input name="name" label="Title" required />
+                                    @php
+                                        $setStart = json_decode(json_encode([['id' => '0', 'name' => 'Bài Viết'], ['id' => '1', 'name' => 'Công Trình']]));
+                                    @endphp
+                                    <x-select name="type"  label="Bài Viết" required :option-list="$setStart" />
                                 </div>
                             </div>
                         </div>
+                        <x-summernote name="sort_description" label="Nội dung ngắn" />
                         <x-summernote name="content" label="Content" />
                         @createseo
                         <button type="submit" class="btn btn-success waves-effect waves-light mr-2">@lang('Save')</button>

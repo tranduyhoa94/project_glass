@@ -30,12 +30,11 @@ Route::get('info', function() { phpinfo(); });
 
 Route::get('', [HomeController::class, 'index'])->name('index');
 Route::get('{aboutUs}', [AboutController::class, 'index'])->where('aboutUs', 'about-us|gioi-thieu')->name('about-us');
-Route::get('{page}', [AboutController::class, 'getPage'])->name('page');
+Route::get('/page/{page}', [AboutController::class, 'getPage'])->name('page');
 Route::get('phuong-thuc/{contact}', [ContactController::class, 'index'])->where('contact', 'contact|lien-he')->name('get-contact');
-Route::get('{news}', [PostController::class, 'index'])->where('news', 'news|tin-tuc');
-Route::get('{news}/{post:slug}', [PostController::class, 'detail'])->where('news', 'news|tin-tuc');
-Route::post('customer', [CustomerController::class, 'store']);
-Route::post('/lien-he', [ContactController::class, 'createContact'])->where('contact', 'contact|lien-he')->name('create-contact');
+Route::get('{news}/{slug}', [PostController::class, 'listPost'])->where('news', 'news|tin-tuc')->name('post-category');
+Route::get('{news}/{slugCategory}/{slug}', [PostController::class, 'detail'])->where('news', 'news|tin-tuc')->name('detail-post');
+Route::post('customer', [CustomerController::class, 'store'])->name('create-contact');
 Route::post('cms', [CmsController::class, 'index']);
 
 Route::get('{locale}', [LocalizationController::class, 'set'])->name('locale')->where('locale', 'en|vi');

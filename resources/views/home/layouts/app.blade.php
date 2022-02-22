@@ -215,6 +215,7 @@ background-image: url(wp-content/uploads/2020/11/contact_form.png);
 </div>
 
 <script src="/js/home/jquery-3.6.0.min.js"></script>
+<script src="/js/home/js-image-zoom.js"></script>
 <script type="text/javascript">
 $.ajaxSetup({
     headers: {

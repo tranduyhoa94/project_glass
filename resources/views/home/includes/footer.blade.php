@@ -7,7 +7,7 @@
           <div class="col-inner">
             <div class="img has-hover logoft x md-x lg-x y md-y lg-y" id="image_1524235964">
               <div class="img-inner dark" >
-                <img width="92" height="64" src="wp-content/uploads/2020/12/logo-1.png" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 92px) 100vw, 92px" />
+                <img width="92" height="64" src="{{ asset('wp-content/uploads/2020/12/logo-1.png') }}" class="attachment-large size-large" alt="" loading="lazy" sizes="(max-width: 92px) 100vw, 92px" />
               </div>
               <style>
               #image_1524235964 {
@@ -63,8 +63,8 @@
                 </div>
               </li>
             </ul>
-            <p><a href="http://online.gov.vn/Home/WebDetails/67375" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
-              <img alt='' title='' src='wp-content/uploads/2020/11/logoSaleNoti.png'/></a>
+            <p><a href="#" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
+              <img alt='' title='' src="{{ asset('wp-content/uploads/2020/11/logoSaleNoti.png') }}"/></a>
             </p>
           </div>
           <style>
@@ -77,22 +77,22 @@
           <div class="col-inner"  >
             <ul class="share-icon">
               <li>
-                <a href="https://www.facebook.com/nhomkinhphucdat.hcm/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
-                  <img src="wp-content/uploads/2020/12/fb.png">
+                <a href="#" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
+                  <img src="{{ asset('wp-content/uploads/2020/12/fb.png') }}">
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/nhomkinhphucdat/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
-                  <img src="wp-content/uploads/2020/12/in.png"></a>
+                <a href="#" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
+                  <img src="{{ asset('wp-content/uploads/2020/12/in.png') }}"></a>
               </li>
               <li>
-                <a href="https://www.youtube.com/channel/UCix3jEwow7_fSz4eqLO5XXw" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
-                  <img src="wp-content/uploads/2020/12/yt.png"></a>
+                <a href="#" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
+                  <img src="{{ asset('wp-content/uploads/2020/12/yt.png') }}"></a>
               </li>
             </ul>
             <div class="dmca">
-              <a href="https://www.dmca.com/Protection/Status.aspx?ID=ab9e0db8-5aa5-446d-9954-1709977e93d8&amp;refurl=https://phucdatdoor.vn/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
-                <img src="wp-content/uploads/2020/12/dmca-badge-w250-5x1-06.png">
+              <a href="#" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
+                <img src="{{ asset('wp-content/uploads/2020/12/dmca-badge-w250-5x1-06.png') }}">
               </a>
             </div>
           </div>

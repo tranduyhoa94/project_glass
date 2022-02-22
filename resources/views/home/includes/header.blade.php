@@ -45,8 +45,8 @@
     <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
       <div id="logo" class="flex-col logo">
         <a href="{{ route('index') }}" title="Thiên Ân Phát - Chuyên thi công lắp đặt nhôm kính, nhôm Xingfa" rel="home" data-wpel-link="internal">
-          <img width="192" height="80" src="wp-content/uploads/2020/12/logo-thien-an-phat.png" class="header_logo header-logo" alt="Thiên ân phát"/>
-          <img  width="192" height="80" src="wp-content/uploads/2020/12/logo-thien-an-phat.png" class="header-logo-dark" alt="Thiên ân phát"/>
+          <img width="192" height="80" src="{{ asset('wp-content/uploads/2020/12/logo-thien-an-phat.png') }}" class="header_logo header-logo" alt="Thiên ân phát"/>
+          <img  width="192" height="80" src="{{ asset('wp-content/uploads/2020/12/logo-thien-an-phat.png') }}" class="header-logo-dark" alt="Thiên ân phát"/>
         </a>
       </div>
 
@@ -82,13 +82,13 @@
                   </ul>
                 @else
                 <li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-design-default">
-                  <a href="#" class="nav-top-link" data-wpel-link="internal">{{ $item['name'] }}</a>
+                  <a href="{{ route('post-category', ['tin-tuc', $item['slug']]) }}" class="nav-top-link" data-wpel-link="internal">{{ $item['name'] }}</a>
                 @endif
               </li>
             @endforeach
           @endif
           <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1412 menu-item-design-default has-dropdown">
-            <a href="goc-tu-van/index.html" class="nav-top-link" data-wpel-link="internal">Tư vấn<i class="icon-angle-down" ></i></a>
+            <a href="#" class="nav-top-link" data-wpel-link="internal">Tư vấn<i class="icon-angle-down" ></i></a>
             <ul class="sub-menu nav-dropdown nav-dropdown-simple dropdown-uppercase">
               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ route('about-us', ['gioi-thieu']) }}" data-wpel-link="internal">Giới thiệu</a></li>
               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ route('get-contact', ['lien-he']) }}" data-wpel-link="internal">Liên hệ</a></li>
