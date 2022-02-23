@@ -52,8 +52,12 @@ class PostController extends Controller
         }
         $cateogry = Category::where('slug', $lugCategory)->first()->toArray();
         $post = Post::where('slug', $sugPost)->first();
+        $newPost = Post::with('category')->orderBy('id')->limit(6)->get()->toArray();
         $seo = $post->seo;
+        $postList = Post::wherehas('category', function($query) use ($cateogry){
+            $query->where('id', $cateogry['id']);
+        })->where('slug', '<>', $sugPost)->inRandomOrder()->limit(12)->get();
 
-        return view('home.post.detail', compact('cateogry', 'seo', 'post'));
+        return view('home.post.detail', compact('cateogry', 'seo', 'post', 'postList', 'newPost'));
     }
 }

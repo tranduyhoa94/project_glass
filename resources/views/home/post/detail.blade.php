@@ -4,6 +4,12 @@
 @section('cover', url($post->image))
 @section('css')
 <style>
+    .text-danger {
+        color: red;
+    }
+    .text-success {
+        color: green;
+    }
 	.banner-page-shop .breadcrumb {
 		display: inline-flex;
 		margin-bottom:0;
@@ -33,22 +39,49 @@
 		font-size:13px;
 	}
 	}
+    a.devvn_buy_now_style {
+    display: inline-block;
+    overflow: hidden;
+    clear: both;
+    padding: 9px 0;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #fff!important;
+    text-align: center;
+    background: #fd6e1d;
+    background: -webkit-gradient(linear,0% 0%,0% 100%,from(#fd6e1d),to(#f59000));
+    background: -webkit-linear-gradient(top,#f59000,#fd6e1d);
+    background: -moz-linear-gradient(top,#f59000,#fd6e1d);
+    background: -ms-linear-gradient(top,#f59000,#fd6e1d);
+    background: -o-linear-gradient(top,#f59000,#fd6e1d);
+    margin: 0 0 20px;
+    text-decoration: none;
+    border-bottom: 0!important;
+    max-width: 350px;
+    width: 100%;
+}
 </style>
 @endsection
 @section('content')
 <div id="product-305" class="product type-product post-305 status-publish first instock product_cat-cua-kinh product_cat-cua-kinh-noi-bat has-post-thumbnail shipping-taxable product-type-simple">
 	<div class="row content-row row-divided row-large row-reverse">
-	<div id="product-sidebar" class="col large-3 hide-for-medium shop-sidebar ">
-		<aside id="woocommerce_products-15" class="widget woocommerce widget_products">
-            <span class="widget-title shop-sidebar">Sản phẩm nổi bật</span>
-            <div class="is-divider small"></div>
-            <ul class="product_list_widget">
-                <li>
-                    <a href="../cua-nhom-jma/index.html" data-wpel-link="internal">
-                        <img width="100" height="100" src="../../wp-content/uploads/2022/02/cong-trinh-cua-nhom-jma-tan-phu-tphcm-10-100x100.jpg" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="Báo giá cửa nhôm JMA nhập khẩu chính hãng 100% giá tốt 2022" loading="lazy" srcset="https://phucdatdoor.vn/wp-content/uploads/2022/02/cong-trinh-cua-nhom-jma-tan-phu-tphcm-10-100x100.jpg 100w, https://phucdatdoor.vn/wp-content/uploads/2022/02/cong-trinh-cua-nhom-jma-tan-phu-tphcm-10-280x280.jpg 280w" sizes="(max-width: 100px) 100vw, 100px">
-                        <span class="product-title">Cửa nhôm JMA</span>
-                    </a>
-                </li>
+        <div id="product-sidebar" class="col large-3 hide-for-medium shop-sidebar ">
+            <aside id="woocommerce_products-15" class="widget woocommerce widget_products">
+                <span class="widget-title shop-sidebar">Bài viết mới</span>
+                <div class="is-divider small"></div>
+                <ul class="product_list_widget">
+                    @if($newPost)
+                        @foreach ($newPost as $item)
+                            <li>
+                                <a href="{{ route('detail-post', ['tin-tuc', $item['category'][0]['slug'], $item['slug']]) }}" data-wpel-link="internal">
+                                    <img width="100" height="100" style="width:100px;height=100px;" src="{{ asset($item['image']) }}" class="attachment-woocommerce_gallery_thumbnail size-woocommerce_gallery_thumbnail" alt="{{ $item['name'] }}" loading="lazy" sizes="(max-width: 100px) 100vw, 100px">
+                                    <span class="product-title">{{ $item['name'] }}</span>
+                                </a>
+                            </li>
+                        @endforeach
+                    @endif
                 </ul>
             </aside>
 		</div>
@@ -87,13 +120,16 @@
                         <div class="product-short-description">
                             {!! $post->sort_description !!}
                         </div>
-                        <a href="javascript:void(0);" class="devvn_buy_now devvn_buy_now_style" data-id="305" data-wpel-link="internal">
-                            <strong>Đăng kí nhận báo giá</strong>
-                            <span></span>
-                        </a>
+                        <div class="scroll-a">
+                            <a href="#review_form" class="devvn_buy_now_style" data-wpel-link="internal">
+                                <strong>Đăng kí nhận báo giá</strong>
+                                <span></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+           
             <div class="product-footer">
                 <div class="woocommerce-tabs wc-tabs-wrapper container tabbed-content">
                     <ul class="tabs wc-tabs product-tabs small-nav-collapse nav nav-uppercase nav-line nav-left" role="tablist">
@@ -107,22 +143,80 @@
                         </div>
                     </div>
                 </div>
+                <div id="review_form_wrapper">
+                    <div id="review_form" class="col-inner review_form">
+                        <div class="review-form-inner has-border">
+                            <div id="respond" class="comment-respond">
+                                <h3 id="reply-title" class="comment-reply-title">Nhận báo giá: </h3>
+                                <form action="#" method="post" id="commentform" class="comment-form" novalidate="">
+                                    @csrf
+                                    <p class="content-form-content">
+                                        <label for="content">Nội Dung
+                                            <span class="required">*</span>
+                                        </label>
+                                        <textarea id="client-content" name="content" cols="45" rows="8" required=""></textarea>
+                                    </p>
+                                    <p class="content-form-author">
+                                        <label for="author">Tên
+                                            <span class="required">*</span>
+                                        </label>
+                                        <input id="client-name" name="name" type="text" value="" size="30" required="">
+                                    </p>
+                                    <p class="content-form-email">
+                                        <label for="email">Email
+                                            <span class="required">*</span>
+                                        </label>
+                                        <input id="client-email" name="email" type="email" value="" size="30" required="">
+                                    </p>
+                                    <div class="anr_captcha_field">
+                                        <div id="anr_captcha_field_1" class="anr_captcha_field_div"></div>
+                                    </div>
+                                    <p class="form-submit">
+                                        <input name="submit" type="button" id="submit" class="submit" value="Gửi đi">
+                                        <input name="post_name" type="hidden" value="{{ $post->name }}">
+                                    </p>
+                                </form>
+                                <div class="wpcf7-response-output hidden text-danger">Có một hoặc nhiều mục nhập có lỗi. Vui lòng kiểm tra và thử lại.</div>
+                                <div class="wpcf7-response-success hidden text-success">Nhận báo giá thành công.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+@include('home.post.post-same')
 @endsection
 @section('js')
 <script>
-    function copy(id) {
-        /* Get the text field */
-        var copyText = document.getElementById(id);
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val(copyText.value).select();
-        document.execCommand("copy");
-        $temp.remove();
-    }
+    $('.submit').click(function (e) {
+            e.preventDefault();
+            var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+            var name = $('#client-name').val().trim();
+            var email = $('#client-email').val().trim();
+            var content = $('#client-content').val().trim();
+            if (name == "" || !pattern.test(email) || content == "") {
+                $('.wpcf7-response-output').removeClass('hidden');
+            } else {
+                $('.wpcf7-response-output').addClass('hidden');
+                $.ajax({
+                    type: 'post',
+                    url: "{{ route('create-contact') }}",
+                    data: $('#commentform').serialize(),
+                    success: function (res) {
+                        $('#commentform')[0].reset()
+                        $('.wpcf7-response-success').removeClass('hidden');
+                        setTimeout(() => {
+                            $('.wpcf7-response-success').addClass('hidden');
+                        }, 3000);
 
+                    },
+                    error:function() { 
+                        $('#commentform')[0].reset()
+                    }
+                });
+            }
+        });
 </script>
 @endsection

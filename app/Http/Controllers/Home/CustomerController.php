@@ -14,7 +14,13 @@ class CustomerController extends Controller
 {
     public function store(Request $request)
     {
-        $customer = Customer::create($request->all());
+        $input = $request->all();
+        if (isset($input['post_name']) && $input['post_name']) {
+            $input['content'] = '( Nhận báo giá: ' . $input['post_name']. ') ' .  $input['content'];
+            unset($input['post_name']);
+        }
+
+        $customer = Customer::create($input);
 
         return response([
             'data' => $customer,

@@ -46,7 +46,7 @@
                 <div class="col-inner">
                     <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1418508498">
                         <div class="img-inner dark">
-                            <img width="595" height="448" src="wp-content/uploads/2021/01/cong-ty-phuc-dat-door.png" class="attachment-large size-large" loading="lazy" sizes="(max-width: 595px) 100vw, 595px">						
+                            <img width="595" height="448" @src="wp-content/uploads/2021/01/cong-ty-phuc-dat-door.png"  data-cms="{{app()->getLocale()}}-index-10" class="attachment-large size-large" loading="lazy" sizes="(max-width: 595px) 100vw, 595px">						
                         </div>
                     </div>
                 </div>
