@@ -75,7 +75,7 @@
                       <ul class="sub-menu nav-dropdown nav-dropdown-simple dropdown-uppercase">
                         @foreach ($item['child_list'] as $i)
                         <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                          <a href="#" data-wpel-link="internal">{{ $i['name'] }}</a>
+                          <a href="{{ route('post-category', ['tin-tuc', $i['slug']]) }}" data-wpel-link="internal">{{ $i['name'] }}</a>
                         </li>
                         @endforeach
                       </ul>
@@ -132,18 +132,18 @@
               <ul class="sub-menu nav-sidebar-ul children">
                 @foreach ($item['child_list'] as $i)
                 <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                  <a href="#" data-wpel-link="internal">{{ $i['name'] }}</a>
+                  <a href="{{ route('post-category', ['tin-tuc', $i['slug']]) }}" data-wpel-link="internal">{{ $i['name'] }}</a>
                 </li>
                 @endforeach
               </ul>
             @else
             <li class="menu-item menu-item-type-post_type menu-item-object-product menu-item-design-default">
-              <a href="#" class="nav-top-link" data-wpel-link="internal">{{ $item['name'] }}</a>
+              <a href="{{ route('post-category', ['tin-tuc', $item['slug']]) }}" class="nav-top-link" data-wpel-link="internal">{{ $item['name'] }}</a>
             @endif
           </li>
         @endforeach
       @endif   
-			<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1412"><a href="goc-tu-van/index.html" data-wpel-link="internal">Tư vấn</a>
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1412"><a href="#" data-wpel-link="internal">Tư vấn</a>
 				<ul class="sub-menu nav-sidebar-ul children">
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13439"><a href="{{ route('about-us', ['gioi-thieu']) }}" data-wpel-link="internal">Giới thiệu</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13344"><a href="{{ route('get-contact', ['lien-he']) }}" data-wpel-link="internal">Liên hệ</a></li>
