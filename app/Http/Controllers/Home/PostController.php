@@ -60,4 +60,14 @@ class PostController extends Controller
 
         return view('home.post.detail', compact('cateogry', 'seo', 'post', 'postList', 'newPost'));
     }
+
+    public function buildDetail($lug)
+    {
+        $post = Post::where('slug', $lug)->first();
+        $postList = Post::where('id', '<>', $post->id)->where('type', 1)->inRandomOrder()->limit(6)->get();
+        $seo = $post->seo;
+        $newPost = Post::with('category')->orderBy('id')->limit(6)->get()->toArray();
+
+        return view('home.build.build-detail', compact('seo', 'post', 'postList', 'newPost'));
+    }
 }

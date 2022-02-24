@@ -194,7 +194,80 @@ background-image: url(wp-content/uploads/2020/11/contact_form.png);
     .wpf-center .wpforms-head-container, 
     .wpf-center .wpforms-submit-container {
     text-align: center; 
-    }		
+    }	
+    .group-0-0-1 {
+    left: 2%;
+    bottom: 2%;
+    display: flex;
+    z-index: 99999;
+    position: fixed;
+    transition: all 250ms ease-in-out 0s;
+    flex-direction: column-reverse;
+}
+.button-0-0-3 {
+    color: rgb(255, 255, 255);
+    width: 56px;
+    cursor: pointer;
+    height: 56px;
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    background: center center / cover no-repeat rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 16%) 0px 2px 5px 0px, rgb(0 0 0 / 12%) 0px 2px 10px 0px;
+    text-align: center;
+    transition: all 250ms ease-in-out 0s;
+    visibility: visible;
+    user-select: none;
+    border-radius: 50%;
+    text-decoration: none;
+    outline: none !important;
+    max-width: none !important;
+    margin-top:20px;
+
+}
+.image-0-0-5 {
+    top: 50%;
+    left: 50%;
+    width: 52px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-out 0s;
+    border-radius: 50px;
+}
+.label-0-0-6 {
+    top: 50%;
+    left: 65px;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 5px 15px;
+    position: absolute;
+    font-size: 15px;
+    transform: translateY(-50%);
+    text-align: start;
+    transition: all 0.2s ease-out 0s;
+    font-family: unset;
+    line-height: initial;
+    white-space: nowrap;
+    border-radius: 3px;
+    background-color: rgb(0, 124, 186);
+}
+.button-0-0-3:hover {
+    box-shadow: rgb(0 0 0 / 18%) 0px 5px 11px 0px, rgb(0 0 0 / 15%) 0px 4px 15px 0px;
+    background-color: rgb(255, 255, 255);
+}
+.stuck {
+    height: 78px!important;
+}
+
+
+@media screen and (min-width: 770px)
+{
+    .label-0-0-6 {
+    opacity: 0;
+    visibility: hidden;
+    }
+}
+
 </style>
     <link href="/css/home/app.min.css" rel="stylesheet">
     
@@ -212,6 +285,20 @@ background-image: url(wp-content/uploads/2020/11/contact_form.png);
         </div>
     </main>
     @include('home.includes.footer')
+    <div class="buttonizer buttonizer-group group-0-0-1">
+        <a target="_blank" rel="nofollow" href="http://m.me/100003036167527" class="buttonizer-button button-0-0-3">
+            <img src="{{ asset('wp-content/uploads/2020/11/Icon-Facebook-60.jpg') }}" class="image-0-0-5">
+            {{-- <div class="buttonizer-label label-0-0-6">FACEBOOK CHAT</div> --}}
+        </a>
+        <a target="_blank" href="https://zalo.me/0905532506" class="buttonizer-button button-0-0-3">
+            <img src="{{ asset('wp-content/uploads/2020/11/Icon-Zalo-60.png') }}" class="image-0-0-11">
+            {{-- <div class="buttonizer-label label-0-0-6">ZALO CHAT</div> --}}
+        </a>
+        <a rel="nofollow" href="tel:0905532506" class="buttonizer-button button-0-0-3">
+            <img src="{{ asset('wp-content/uploads/2020/11/Icon-Call-60.png') }}" class="image-0-0-17">
+            {{-- <div class="buttonizer-label label-0-0-6">GỌI NGAY</div> --}}
+        </a>
+    </div>
 </div>
 
 <script src="/js/home/jquery-3.6.0.min.js"></script>

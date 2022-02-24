@@ -208,9 +208,9 @@
                                 <li class="sidebar-item"><a href="{{route('configuration.index', 'social')}}" class="sidebar-link">
                                     <i class="mdi mdi-octagram"></i><span class="hide-menu">@lang('Social Network')</span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="{{route('configuration.index', 'website')}}" class="sidebar-link">
+                                {{-- <li class="sidebar-item"><a href="{{route('configuration.index', 'website')}}" class="sidebar-link">
                                     <i class="mdi mdi-octagram"></i><span class="hide-menu">@lang('Website')</span></a>
-                                </li>
+                                </li> --}}
                             </ul>
                         </li>
                     </ul>

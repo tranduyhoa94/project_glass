@@ -32,5 +32,11 @@ class ComposerServiceProvider extends ServiceProvider
         ],
             'App\View\Components\CategoryComposer' // composer class name
         );
+
+        View::composer([
+            'home.build.build-finish'
+        ],
+            'App\View\Components\BuildSuccess'
+        );
     }
 }

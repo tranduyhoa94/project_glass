@@ -32,6 +32,7 @@ Route::get('', [HomeController::class, 'index'])->name('index');
 Route::get('{aboutUs}', [AboutController::class, 'index'])->where('aboutUs', 'about-us|gioi-thieu')->name('about-us');
 Route::get('/page/{page}', [AboutController::class, 'getPage'])->name('page');
 Route::get('phuong-thuc/{contact}', [ContactController::class, 'index'])->where('contact', 'contact|lien-he')->name('get-contact');
+Route::get('cong-trinh/{slug}', [PostController::class, 'buildDetail'])->name('build-detail');
 Route::get('{news}/{slug}', [PostController::class, 'listPost'])->where('news', 'news|tin-tuc')->name('post-category');
 Route::get('{news}/{slugCategory}/{slug}', [PostController::class, 'detail'])->where('news', 'news|tin-tuc')->name('detail-post');
 Route::post('customer', [CustomerController::class, 'store'])->name('create-contact');
