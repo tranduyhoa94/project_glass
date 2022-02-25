@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Services\ImageService;
 use App\Services\PostService;
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
@@ -69,5 +70,16 @@ class PostController extends Controller
         $newPost = Post::with('category')->orderBy('id')->limit(6)->get()->toArray();
 
         return view('home.build.build-detail', compact('seo', 'post', 'postList', 'newPost'));
+    }
+
+    public function suggestSearch(Request $request) {
+        $name = $request->name;
+        $post = Post::with('category')->where('name', 'LIKE',  '%' . $name . '%')->limit(6)->get()->toArray();
+
+        return response([
+            'data' => $post,
+            'success' => true,
+            'message' => ''
+        ], 200);
     }
 }

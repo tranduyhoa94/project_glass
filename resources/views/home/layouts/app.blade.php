@@ -44,6 +44,7 @@
     <link rel='stylesheet' id='flatsome-shop-css'  href="{{ asset('wp-content/themes/flatsome/assets/css/flatsome-shop2916.css?ver=3.13.1') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='flatsome-style-css'  href="{{ asset('wp-content/themes/ecom-child/style6aec.css?ver=3.0') }}" type='text/css' media='all' />
     {{-- <link rel='stylesheet' id='a-z-listing-css'  href="{{ asset('wp-content/plugins/a-z-listing/css/a-z-listing-defaultae82.css?ver=4.2.0') }}" type='text/css' media='all' /> --}}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <style id='font-awesome-official-v4shim-inline-css' type='text/css'>
         @font-face {
         font-family: "FontAwesome";
@@ -303,12 +304,62 @@ background-image: url(wp-content/uploads/2020/11/contact_form.png);
 
 <script src="/js/home/jquery-3.6.0.min.js"></script>
 <script src="/js/home/js-image-zoom.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 <script type="text/javascript">
 $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
+
+function delay(callback, ms) {
+  var timer = 0;
+  return function() {
+    var context = this, args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      callback.apply(context, args);
+    }, ms || 0);
+  };
+}
+
+$('.search-field').keyup(delay(function (e) {
+    var value = $(this).val().trim();
+    var strHtml = "";
+    if (value != "") {
+        $.ajax( {
+        url: '{{ route('suggest-search') }}',
+        method: "POST",
+        dataType: "json",
+        data: {
+            name: value
+        },
+        success: function( data ) {
+                if (data.data.length > 0) {
+                    data.data.forEach(function (item, index) {
+                        var linkImgae = item.image;
+                        var link = '{{ route('index') }}' + '/tin-tuc/' + item.category[0].slug + '/' + item.slug;
+                        strHtml += "<div class='autocomplete-suggestions'> " +
+                                        "<a href='" + link + "' ><div class='autocomplete-suggestion' data-index='" + index + "'>" +
+                                            "<img class='search-image' src='" + linkImgae + "'>" +
+                                            "<div class='search-name'>" + item.name +
+                                            "</div>" +
+                                        "</div></a>"+
+                                    "</div>"; 
+                    });
+                    $('.live-search-results').children().remove();
+                    $('.live-search-results').append(strHtml);
+                } else {
+                    $('.live-search-results').children().remove();
+                }
+            }
+        });
+    } else {
+        $('.live-search-results').children().remove();
+    }
+    
+}, 500));
+
 </script>
 <script async defer crossorigin="anonymous" type="text/javascript" src="/js/home/app.min.js"></script>
 <script type='text/javascript' src="{{ asset('wp-includes/js/dist/vendor/wp-polyfill.min89b1.js?ver=7.4.4') }}" id='wp-polyfill-js'></script>

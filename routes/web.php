@@ -33,6 +33,7 @@ Route::get('{aboutUs}', [AboutController::class, 'index'])->where('aboutUs', 'ab
 Route::get('/page/{page}', [AboutController::class, 'getPage'])->name('page');
 Route::get('phuong-thuc/{contact}', [ContactController::class, 'index'])->where('contact', 'contact|lien-he')->name('get-contact');
 Route::get('cong-trinh/{slug}', [PostController::class, 'buildDetail'])->name('build-detail');
+Route::post('/suggest-search', [PostController::class, 'suggestSearch'])->name('suggest-search');
 Route::get('{news}/{slug}', [PostController::class, 'listPost'])->where('news', 'news|tin-tuc')->name('post-category');
 Route::get('{news}/{slugCategory}/{slug}', [PostController::class, 'detail'])->where('news', 'news|tin-tuc')->name('detail-post');
 Route::post('customer', [CustomerController::class, 'store'])->name('create-contact');

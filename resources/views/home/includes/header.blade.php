@@ -18,20 +18,20 @@
                     <li class="header-search-form search-form html relative has-icon">
                       <div class="header-search-form-wrapper">
                         <div class="searchform-wrapper ux-search-box relative is-normal">
-                          <form role="search" method="get" class="searchform" action="#">
+                          <form role="search">
                             <div class="flex-row relative">
                               <div class="flex-col flex-grow">
-                                {{-- <label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm kiếm:</label> --}}
-                                {{-- <input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="Tìm kiếm sản phẩm" value="" name="s" /> --}}
-                                {{-- <input type="hidden" name="post_type" value="product" /> --}}
+                                <label class="screen-reader-text" for="woocommerce-product-search-field-0">Tìm kiếm:</label>
+                                <input type="text" class="search-field mb-0" placeholder="Tìm kiếm sản phẩm" value="" name="name" />
                               </div>
-                              <div class="flex-col">
-                                {{-- <button type="submit" value="Tìm kiếm" class="ux-search-submit submit-button secondary button icon mb-0">
+                              {{-- <div class="flex-col">
+                                <button type="button" value="Tìm kiếm" class="ux-search-submit secondary button icon mb-0">
                                   <i class="icon-search" ></i>
-                                </button> --}}
-                              </div>
+                                </button>
+                              </div> --}}
                             </div>
-                            <div class="live-search-results text-left z-top"></div>
+                            <div class="live-search-results text-left z-top">
+                            </div>
                           </form>
                         </div>
                       </div>
