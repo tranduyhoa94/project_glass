@@ -32,7 +32,7 @@
                                             <div class="product-small box ">
                                                 <div class="box-image">
                                                     <div class="image-fade_in_back">
-                                                        <a href="#" data-wpel-link="internal">
+                                                        <a href="{{ route('detail-post', ['tin-tuc', $item['slug'], $value['slug']]) }}" data-wpel-link="internal">
                                                             <img width="247" height="296" src="{{ asset($value['image']) }}" style="height: 296px;" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="{{ $value['name'] }}" loading="lazy" />
                                                             <img width="247" height="296" src="{{ asset($value['image']) }}" style="height: 296px;" class="show-on-hover absolute fill hide-for-small back-image" loading="lazy" sizes="(max-width: 247px) 100vw, 247px" />
                                                         </a>
@@ -44,7 +44,7 @@
                                                 <div class="box-text box-text-products text-center grid-style-2">
                                                     <div class="title-wrapper">
                                                         <p class="name product-title woocommerce-loop-product__title">
-                                                            <a href="#" class="woocommerce-LoopProduct-link woocommerce-loop-product__link" data-wpel-link="internal">{{ $value['name'] }}</a>
+                                                            <a href="{{ route('detail-post', ['tin-tuc', $item['slug'], $value['slug']]) }}" class="woocommerce-LoopProduct-link woocommerce-loop-product__link" data-wpel-link="internal">{{ $value['name'] }}</a>
                                                         </p>
                                                     </div>
                                                     <div class="price-wrapper"></div>

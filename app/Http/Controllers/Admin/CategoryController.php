@@ -110,19 +110,20 @@ class CategoryController extends Controller
     public function order(Request $request)
     {
         foreach (Utils::jsonDecode($request->categoryList) as $order => $categoryJson) {
-            $this->updateCategoryList($categoryJson, null);
+            $this->updateCategoryList($categoryJson, null , ++$order);
         }
         return trans('Saved successfully');
     }
 
-    public function updateCategoryList($categoryJson, $parentCategoryId)
+    public function updateCategoryList($categoryJson, $parentCategoryId, $order)
     {
         $category = Category::find($categoryJson->id);
         $category->category_id = $parentCategoryId;
+        $category->order = $order;
         $category->save();
         if (isset($categoryJson->children)) {
             foreach ($categoryJson->children as $order => $categoryChildJson) {
-                $this->updateCategoryList($categoryChildJson, $categoryJson->id);
+                $this->updateCategoryList($categoryChildJson, $categoryJson->id, ++$order);
             }
         }
     }

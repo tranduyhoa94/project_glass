@@ -16,7 +16,7 @@ class CategoryComposer
      */
     public function compose(View $view)
     {
-        $categories = Category::with('childList')->whereNull('category_id')->get()->toArray();
+        $categories = Category::with('childList')->whereNull('category_id')->orderBy('order')->get()->toArray();
         $slides = Slide::orderBy('order')->get()->toArray();
         $pages = Page::get()->toArray();
 

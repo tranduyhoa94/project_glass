@@ -24,6 +24,6 @@ class MasterCategory extends Model
 
     public function rootCategoryList()
     {
-        return $this->hasMany(Category::class)->whereNull('category_id')->where('language', app()->getLocale());
+        return $this->hasMany(Category::class)->whereNull('category_id')->where('language', app()->getLocale())->orderBy('order');
     }
 }
