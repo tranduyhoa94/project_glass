@@ -77,16 +77,16 @@
           <div class="col-inner"  >
             <ul class="share-icon">
               <li>
-                <a href="#" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
+                <a href="{{ $config->where('name', 'facebook')->first()->toArray()['content'] }}" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
                   <img src="{{ asset('wp-content/uploads/2020/12/fb.png') }}">
                 </a>
               </li>
-              <li>
+              {{-- <li>
                 <a href="#" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
                   <img src="{{ asset('wp-content/uploads/2020/12/in.png') }}"></a>
-              </li>
+              </li> --}}
               <li>
-                <a href="#" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
+                <a href="{{ $config->where('name', 'youtube')->first()->toArray()['content'] }}" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
                   <img src="{{ asset('wp-content/uploads/2020/12/yt.png') }}"></a>
               </li>
             </ul>
