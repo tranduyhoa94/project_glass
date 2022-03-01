@@ -14,17 +14,19 @@ class AboutController extends Controller
             return redirect(trans($path));
         }
        
-        $page = Page::where('slug','like', '%' . request()->path() . '%')->first()->toArray();
+        $page = Page::where('slug','like', '%' . request()->path() . '%')->first();
+        $seo = $page->seo;
 
-        return view('home.' . $path . '.index', ['page' => $page]);
+        return view('home.' . $path . '.index', ['page' => $page->toArray(), 'seo' => $seo]);
     }
 
     public function getPage($page)
     {
         $path = 'about-us';
         
-        $page = Page::where('slug','like', '%' . $page . '%')->first()->toArray();
+        $page = Page::where('slug','like', '%' . $page . '%')->first();
+        $seo = $page->seo;
 
-        return view('home.' . $path . '.index', ['page' => $page]);
+        return view('home.' . $path . '.index', ['page' => $page->toArray(), 'seo' => $seo]);
     }
 }

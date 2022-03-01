@@ -64,7 +64,7 @@
               </li>
             </ul>
             <p><a href="#" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
-              <img alt='' title='' src="{{ asset('wp-content/uploads/2020/11/logoSaleNoti.png') }}"/></a>
+              <img alt='' title='' src="{{ asset('wp-content/uploads/2020/11/logoSaleNoti.png') }}" style="width: 225px; height: 85px;"/></a>
             </p>
           </div>
           <style>
@@ -78,7 +78,7 @@
             <ul class="share-icon">
               <li>
                 <a href="{{ $config->where('name', 'facebook')->first()->toArray()['content'] }}" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
-                  <img src="{{ asset('wp-content/uploads/2020/12/fb.png') }}">
+                  <img src="{{ asset('wp-content/uploads/2020/12/fb.png') }}" width="34" height="34">
                 </a>
               </li>
               {{-- <li>
@@ -87,12 +87,12 @@
               </li> --}}
               <li>
                 <a href="{{ $config->where('name', 'youtube')->first()->toArray()['content'] }}" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
-                  <img src="{{ asset('wp-content/uploads/2020/12/yt.png') }}"></a>
+                  <img src="{{ asset('wp-content/uploads/2020/12/yt.png') }}" style="width: 34px; height: 34px;"></a>
               </li>
             </ul>
             <div class="dmca">
               <a href="#" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
-                <img src="{{ asset('wp-content/uploads/2020/12/dmca-badge-w250-5x1-06.png') }}">
+                <img src="{{ asset('wp-content/uploads/2020/12/dmca-badge-w250-5x1-06.png') }}" style="width: 225px; height: 45px;">
               </a>
             </div>
           </div>

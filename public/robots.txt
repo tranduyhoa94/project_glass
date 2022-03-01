@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://shopgroup.vn/sitemap.xml
-Sitemap: https://shopgroup.info/sitemap.xml
+Sitemap: https://dtthienanphat.com/sitemap.xml

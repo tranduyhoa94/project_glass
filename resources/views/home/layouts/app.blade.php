@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google-site-verification" content="XrscSqm4bh48Nw0IZhyH-JO52qXBf45BcSy5xigkL2Y" />
+    <meta name="google-site-verification" content="fEGeFq_tlQd5B2y0u7fLhItrHAQpXwZGPWYb1u-3MTs" />
     <meta property="og:image" content="@yield('cover', '/images/home/logo-white.png')"/>
     <meta property="og:image:alt" content="@yield('cover', '/images/home/logo-white.png')"/>
     <meta name="twitter:image" content="@yield('cover', '/images/home/logo-white.png')"/>
@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/admin/favicon.png">
     
     <link rel="canonical" href="{{request()->url()}}">
-    <link rel='stylesheet' id='flatsome-googlefonts-css'  href='http://fonts.googleapis.com/css?family=Roboto%3Aregular%2C700%2Cregular%2C700%2Cregular&amp;display=swap&amp;ver=3.9' type='text/css' media='all' />
+    {{-- <link rel='stylesheet' id='flatsome-googlefonts-css'  href='http://fonts.googleapis.com/css?family=Roboto%3Aregular%2C700%2Cregular%2C700%2Cregular&amp;display=swap&amp;ver=3.9' type='text/css' media='all' /> --}}
     {{-- <link rel='stylesheet' id='dashicons-css'  href="{{ asset('wp-includes/css/dashicons.min3bea.css?ver=5.6.7') }}" type='text/css' media='all' /> --}}
     <link rel='stylesheet' id='menu-icons-extra-css'  href="{{ asset('wp-content/plugins/ot-flatsome-vertical-menu/libs/menu-icons/css/extra.min9fd1.css?ver=0.12.2') }}" type='text/css' media='all' />
     {{-- <link rel='stylesheet' id='wp-block-library-css'  href="{{ asset('wp-includes/css/dist/block-library/style.min3bea.css?ver=5.6.7') }}" type='text/css' media='all' /> --}}
@@ -38,13 +38,13 @@
     {{-- <link rel='stylesheet' id='devvn-quickbuy-style-css'  href="{{ asset('wp-content/plugins/devvn-quick-buy/css/devvn-quick-buy784e.css?ver=2.1.6') }}" type='text/css' media='all' /> --}}
     <link rel='stylesheet' id='ot-vertical-menu-css-css'  href="{{ asset('wp-content/plugins/ot-flatsome-vertical-menu/assets/css/style9632.css?ver=1.2.3') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='uaf_client_css-css'  href="{{ asset('wp-content/uploads/useanyfont/uaf4402.css?ver=1644937321') }}" type='text/css' media='all' />
-    <link rel='stylesheet' id='wonderplugin-3dcarousel-style-css'  href="{{ asset('wp-content/plugins/wonderplugin-3dcarousel-trial/engine/wonderplugin3dcarousel7868.css?ver=3.9') }}" type='text/css' media='all' />
+    {{-- <link rel='stylesheet' id='wonderplugin-3dcarousel-style-css'  href="{{ asset('wp-content/plugins/wonderplugin-3dcarousel-trial/engine/wonderplugin3dcarousel7868.css?ver=3.9') }}" type='text/css' media='all' /> --}}
     <link rel='stylesheet' id='flatsome-icons-css'  href="{{ asset('wp-content/themes/flatsome/assets/css/fl-iconsae34.css?ver=3.12') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='flatsome-main-css'  href="{{ asset('wp-content/themes/flatsome/assets/css/flatsome2916.css?ver=3.13.1') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='flatsome-shop-css'  href="{{ asset('wp-content/themes/flatsome/assets/css/flatsome-shop2916.css?ver=3.13.1') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='flatsome-style-css'  href="{{ asset('wp-content/themes/ecom-child/style6aec.css?ver=3.0') }}" type='text/css' media='all' />
     {{-- <link rel='stylesheet' id='a-z-listing-css'  href="{{ asset('wp-content/plugins/a-z-listing/css/a-z-listing-defaultae82.css?ver=4.2.0') }}" type='text/css' media='all' /> --}}
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    {{-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"> --}}
     <style id='font-awesome-official-v4shim-inline-css' type='text/css'>
         @font-face {
         font-family: "FontAwesome";
@@ -80,10 +80,10 @@
         unicode-range: U+F004-F005,U+F007,U+F017,U+F022,U+F024,U+F02E,U+F03E,U+F044,U+F057-F059,U+F06E,U+F070,U+F075,U+F07B-F07C,U+F080,U+F086,U+F089,U+F094,U+F09D,U+F0A0,U+F0A4-F0A7,U+F0C5,U+F0C7-F0C8,U+F0E0,U+F0EB,U+F0F3,U+F0F8,U+F0FE,U+F111,U+F118-F11A,U+F11C,U+F133,U+F144,U+F146,U+F14A,U+F14D-F14E,U+F150-F152,U+F15B-F15C,U+F164-F165,U+F185-F186,U+F191-F192,U+F1AD,U+F1C1-F1C9,U+F1CD,U+F1D8,U+F1E3,U+F1EA,U+F1F6,U+F1F9,U+F20A,U+F247-F249,U+F24D,U+F254-F25B,U+F25D,U+F267,U+F271-F274,U+F279,U+F28B,U+F28D,U+F2B5-F2B6,U+F2B9,U+F2BB,U+F2BD,U+F2C1-F2C2,U+F2D0,U+F2D2,U+F2DC,U+F2ED,U+F328,U+F358-F35B,U+F3A5,U+F3D1,U+F410,U+F4AD;
         }
     </style>
-    <script type='text/javascript' src="{{ asset('wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1') }}" id='jquery-core-js'></script>
-    <script type='text/javascript' src="{{ asset('wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2') }}" id='jquery-migrate-js'></script>
-    <script type='text/javascript' src="{{ asset('wp-content/plugins/wonderplugin-3dcarousel-trial/engine/wp3dcarousellightbox7868.js?ver=3.9') }}" id='wonderplugin-3dcarousel-lightbox-script-js'></script>
-    <script type='text/javascript' src="{{ asset('wp-content/plugins/wonderplugin-3dcarousel-trial/engine/wonderplugin3dcarousel7868.js?ver=3.9') }}" id='wonderplugin-3dcarousel-script-js'></script>
+    {{-- <script type='text/javascript' src="{{ asset('wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1') }}" id='jquery-core-js'></script> --}}
+    {{-- <script type='text/javascript' src="{{ asset('wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2') }}" id='jquery-migrate-js'></script> --}}
+    {{-- <script type='text/javascript' src="{{ asset('wp-content/plugins/wonderplugin-3dcarousel-trial/engine/wp3dcarousellightbox7868.js?ver=3.9') }}" id='wonderplugin-3dcarousel-lightbox-script-js'></script> --}}
+    {{-- <script type='text/javascript' src="{{ asset('wp-content/plugins/wonderplugin-3dcarousel-trial/engine/wonderplugin3dcarousel7868.js?ver=3.9') }}" id='wonderplugin-3dcarousel-script-js'></script> --}}
     <!-- Custom CSS -->
     <style type="text/css" id="wp-custom-css">
         .form-lienhe 
@@ -288,15 +288,15 @@ background-image: url(wp-content/uploads/2020/11/contact_form.png);
     @include('home.includes.footer')
     <div class="buttonizer buttonizer-group group-0-0-1">
         <a target="_blank" rel="nofollow" href="http://m.me/100003036167527" class="buttonizer-button button-0-0-3">
-            <img src="{{ asset('wp-content/uploads/2020/11/Icon-Facebook-60.jpg') }}" class="image-0-0-5">
+            <img src="{{ asset('wp-content/uploads/2020/11/Icon-Facebook-60.jpg') }}" class="image-0-0-5" width="56" height="56">
             {{-- <div class="buttonizer-label label-0-0-6">FACEBOOK CHAT</div> --}}
         </a>
         <a target="_blank" href="https://zalo.me/0905532506" class="buttonizer-button button-0-0-3">
-            <img src="{{ asset('wp-content/uploads/2020/11/Icon-Zalo-60.png') }}" class="image-0-0-11">
+            <img src="{{ asset('wp-content/uploads/2020/11/Icon-Zalo-60.png') }}" class="image-0-0-11"  width="56" height="56">
             {{-- <div class="buttonizer-label label-0-0-6">ZALO CHAT</div> --}}
         </a>
         <a rel="nofollow" href="tel:0905532506" class="buttonizer-button button-0-0-3">
-            <img src="{{ asset('wp-content/uploads/2020/11/Icon-Call-60.png') }}" class="image-0-0-17">
+            <img src="{{ asset('wp-content/uploads/2020/11/Icon-Call-60.png') }}" class="image-0-0-17"  width="56" height="56">
             {{-- <div class="buttonizer-label label-0-0-6">GỌI NGAY</div> --}}
         </a>
     </div>
@@ -304,7 +304,7 @@ background-image: url(wp-content/uploads/2020/11/contact_form.png);
 
 <script src="/js/home/jquery-3.6.0.min.js"></script>
 <script src="/js/home/js-image-zoom.js"></script>
-<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+{{-- <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script> --}}
 <script type="text/javascript">
 $.ajaxSetup({
     headers: {
